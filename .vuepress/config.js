@@ -151,8 +151,7 @@ module.exports = {
                 recoverTime: 2000
             }
         ],
-        [
-            'vuepress-plugin-helper-live2d', {
+        [ 'vuepress-plugin-helper-live2d', {
             // 是否开启控制台日志打印(default: false)
             log: false,
             live2d: {
