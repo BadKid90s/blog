@@ -185,7 +185,12 @@ module.exports = {
             size: 2, // size of the particle, default: 2
             shape: ['star' | 'circle'], // shape of the particle, default: 'star'
             zIndex: 999999999, // z-index property of the canvas, default: 999999999
-        },
-        ],
+        }],
+        ['@vuepress/active-header-links', {
+            sidebarLinkSelector: '.sidebar-link',
+            headerAnchorSelector: '.header-anchor'
+        }],
+        ['ribbon'],
+        ['@vuepress-reco/vuepress-plugin-pagation']
     ]
 }
