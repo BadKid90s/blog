@@ -1,5 +1,8 @@
+const sidebar = require('./sidebar')
+const nav = require('./nav')
+
 module.exports = {
-    "title": "blog",
+    "title": "Post90sBadKid的个人博客",
     "description": "",
     "dest": "public",
     "head": [
@@ -16,63 +19,33 @@ module.exports = {
                 "name": "viewport",
                 "content": "width=device-width,initial-scale=1,user-scalable=no"
             }
-        ]
+        ],
+        // 引入jquery
+        ["script", {
+            "language": "javascript",
+            "type": "text/javascript",
+            "src": "https://cdn.bootcdn.net/ajax/libs/jquery/3.5.1/jquery.min.js"
+        }],
+        // 引入鼠标点击脚本
+        ["script", {
+            "language": "javascript",
+            "type": "text/javascript",
+            "src": "/js/MouseClickEffect.js"
+        }]
     ],
     "theme": "reco",
     "themeConfig": {
-        "nav": [
-            {
-                "text": "首页",
-                "link": "/",
-                "icon": "reco-home"
-            },
-            {
-                "text": "时间线",
-                "link": "/timeline/",
-                "icon": "reco-date"
-            },
-            {
-                "text": "文档",
-                "icon": "reco-message",
-                "items": [
-                    {
-                        "text": "vuepress-reco",
-                        "link": "/docs/theme-reco/"
-                    }
-                ]
-            },
-            {
-                "text": "链接",
-                "icon": "reco-message",
-                "items": [
-                    {
-                        "text": "GitHub",
-                        "link": "https://github.com/recoluan",
-                        "icon": "reco-github"
-                    }
-                ]
-            }
-        ],
-        "sidebar": {
-            "/docs/theme-reco/": [
-                "",
-                "theme",
-                "plugin",
-                "api"
-            ],
-            "/docs/java/": [
-                "hello",
-            ]
-        },
+        "nav": nav,
+        "sidebar": sidebar,
         "type": "blog",
         "blogConfig": {
             "category": {
                 "location": 3,// 在导航栏菜单中所占的位置，默认2
-                "text": "分类" // 默认文案 “分类”
+                "text": "大分类" // 默认文案 “分类”
             },
             "tag": {
                 "location": 3, // 在导航栏菜单中所占的位置，默认3
-                "text": "标签"  // 默认文案 “标签”
+                "text": "小标签"  // 默认文案 “标签”
             }
         },
         "friendLink": [ // 信息栏展示社交信息
@@ -96,7 +69,8 @@ module.exports = {
         "author": "wangruiyu",
         "authorAvatar": "/avatar.png",
         "record": "xxxx",
-        "startYear": "2017"
+        "startYear": "2021",
+        "subSidebar": "auto"//在所有页面中启用自动生成子侧边栏，原 sidebar 仍然兼容
     },
     "markdown": {
         "lineNumbers": true
@@ -141,54 +115,37 @@ module.exports = {
             ribbonAnimationShow: true  // 滑动彩带
         }],
         ['go-top'],
-        [
-            "dynamic-title",
-            {
-                showIcon: "https://www.zpzpup.com/assets/image/favicon.ico",
-                showText: "欢迎回来 O(∩_∩)O~",
-                hideIcon: "https://www.zpzpup.com/assets/image/favicon.ico",
-                hideText: "失联中。。。快回来~",
-                recoverTime: 2000
-            }
-        ],
-        [ 'vuepress-plugin-helper-live2d', {
-            // 是否开启控制台日志打印(default: false)
-            log: false,
-            live2d: {
-                // 是否启用(关闭请设置为false)(default: true)
-                enable: true,
-                // 模型名称(default: hibiki)
-                model: 'koharu',
-                display: {
-                    position: "right", // 显示位置：left/right(default: 'right')
-                    width: 135, // 模型的长度(default: 135)
-                    height: 300, // 模型的高度(default: 300)
-                    hOffset: 65, //  水平偏移(default: 65)
-                    vOffset: 0, //  垂直偏移(default: 0)
-                },
-                mobile: {
-                    show: false // 是否在移动设备上显示(default: false)
-                },
-                react: {
-                    opacity: 1 // 模型透明度(default: 0.8)
-                }
-            }
-        }
-        ],
-        ['flexsearch-pro', {//自定义搜索参数
-            searchPaths: [],    // 搜索路径数组，为空表示搜索全部路径
-            searchHotkeys: ['s'],    // 激活搜索控件的热键, 默认是 "s" ，也可以添加更多热键
-            searchResultLength: 60,    // 搜索结果展示的字符长度, 默认是60个字节
+        ['dynamic-title', {
+            showIcon: "https://www.zpzpup.com/assets/image/favicon.ico",
+            showText: "欢迎回来 O(∩_∩)O~",
+            hideIcon: "https://www.zpzpup.com/assets/image/favicon.ico",
+            hideText: "失联中。。。快回来~",
+            recoverTime: 2000
         }],
-        ['cursor-effects', {
-            size: 2, // size of the particle, default: 2
-            shape: ['star' | 'circle'], // shape of the particle, default: 'star'
-            zIndex: 999999999, // z-index property of the canvas, default: 999999999
-        }],
-        ['@vuepress/active-header-links', {
-            sidebarLinkSelector: '.sidebar-link',
-            headerAnchorSelector: '.header-anchor'
-        }],
+        // [ 'vuepress-plugin-helper-live2d', {
+        //     // 是否开启控制台日志打印(default: false)
+        //     log: false,
+        //     live2d: {
+        //         // 是否启用(关闭请设置为false)(default: true)
+        //         enable: true,
+        //         // 模型名称(default: hibiki)
+        //         model: 'koharu',
+        //         display: {
+        //             position: "right", // 显示位置：left/right(default: 'right')
+        //             width: 135, // 模型的长度(default: 135)
+        //             height: 300, // 模型的高度(default: 300)
+        //             hOffset: 65, //  水平偏移(default: 65)
+        //             vOffset: 0, //  垂直偏移(default: 0)
+        //         },
+        //         mobile: {
+        //             show: false // 是否在移动设备上显示(default: false)
+        //         },
+        //         react: {
+        //             opacity: 1 // 模型透明度(default: 0.8)
+        //         }
+        //     }
+        // }],
+        ['@vuepress/active-header-links'],
         ['ribbon'],
         ['@vuepress-reco/vuepress-plugin-pagation']
     ]
