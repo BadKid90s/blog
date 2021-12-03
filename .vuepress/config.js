@@ -4,7 +4,12 @@ const nav = require('./nav')
 module.exports = {
     "title": "Post90sBadKid的个人博客",
     "description": "",
-    "dest": "public",
+    "dest": "dist",
+    "locales": {
+        '/': {
+            lang: 'zh-CN'
+        }
+    },
     "head": [
         [
             "link",
