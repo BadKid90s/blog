@@ -5,7 +5,8 @@
   "scripts": {
     "dev": "vuepress dev . --open --host \"localhost\"",
     "build": "vuepress build .",
-    "deploy": " deploy.sh"
+    "deploy-sh": " deploy.sh",
+    "deploy-bat": " deploy.bat"
   },
   "devDependencies": {
     "@vuepress-reco/vuepress-plugin-pagation": "^1.4.7",
