@@ -7,7 +7,10 @@ module.exports = {
     ],
     "/docs/es/": [
         "",
-        // "elasticSearchStudy",
+        "ElasticSearchStudy01",
+        "ElasticSearchStudy02",
+        "ElasticSearchStudy03",
+        "ElasticSearchStudy04",
         // "elasticSearchExercise",
     ],
     // "/docs/Nuxt/": [
