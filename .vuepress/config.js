@@ -5,7 +5,7 @@ module.exports = {
     "title": "Post90sBadKid的个人博客",
     "description": "",
     "dest": "dist",
-    "base":"blog",
+    "base":"/blog/",
     "locales": {
         '/': {
             lang: 'zh-CN'
