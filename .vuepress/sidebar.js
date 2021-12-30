@@ -13,15 +13,13 @@ module.exports = {
         "ElasticSearchStudy04",
         // "elasticSearchExercise",
     ],
-    // "/docs/Nuxt/": [
-    //     {
-    //         "title": "Nuxt",
-    //         "collapsable": false,
-    //         "children": [
-    //             'introduction',
-    //             'asyncData',
-    //             'context'
-    //         ]
-    //     }
-    // ]
+    "/docs/netty/": [
+        "",
+        "00",
+        "01",
+        "02",
+        "03",
+        "04",
+        "05"
+    ]
 }
