@@ -14,7 +14,6 @@ module.exports = {
         // "elasticSearchExercise",
     ],
     "/docs/netty/": [
-        "",
         "00",
         "01",
         "02",
