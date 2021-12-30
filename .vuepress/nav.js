@@ -14,13 +14,17 @@ module.exports = [
         "icon": "reco-message",
         "items": [
             {
-                "text": "Test",
-                "link": "/docs/test/"
+                "text": "Netty",
+                "link": "/docs/netty/"
             },
             {
                 "text": "ElasticSearch",
                 "link": "/docs/es/"
-            }
+            },
+            {
+                "text": "Test",
+                "link": "/docs/test/"
+            },
         ]
     },
     {
