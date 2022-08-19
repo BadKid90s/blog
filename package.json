@@ -2,6 +2,7 @@
   "name": "blog",
   "version": "1.0.0",
   "author": "wangruiyu",
+  "license": "MIT",
   "scripts": {
     "dev": "vuepress dev . --open --host \"localhost\"",
     "build": "vuepress build .",

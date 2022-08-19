@@ -3,7 +3,7 @@ home: true
 heroText: Post90sBadKid
 tagline:  有道无术，术尚可求；有术无道止于术。
 heroTextStyle: {
-  color: '#000'
+  color: '#FFF'
 }
 bgImageStyle: {
     height: 'calc(100vh - 3.6rem)'

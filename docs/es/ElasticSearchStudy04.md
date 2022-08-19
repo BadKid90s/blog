@@ -17,7 +17,7 @@ categories:
 
 一般我们使用高级API
 
-![image-20200802231215650](https://gitee.com/Post-90sBadKid/imageshack/raw/master/image-20200802231215650.png)
+![image-20200802231215650](https://gitee.com/BadKid90s/imageshack/blob/other/image-20200802231215650.png)
 
 ```xml
 <dependency>
@@ -29,7 +29,7 @@ categories:
 
 ## 找对象
 
-![image-20200802231348859](https://gitee.com/Post-90sBadKid/imageshack/raw/master/image-20200802231348859.png)
+![image-20200802231348859](https://gitee.com/BadKid90s/imageshack/blob/other/image-20200802231348859.png)
 
 ## 搭建项目
 
@@ -105,7 +105,7 @@ categories:
 ```
 
 SpringBoot默认使用7.6.2,与本地版本不一致会连接不成功。
-![image-20200802231523942](https://gitee.com/Post-90sBadKid/imageshack/raw/master/image-20200802231523942.png)
+![image-20200802231523942](https://gitee.com/BadKid90s/imageshack/blob/other/image-20200802231523942.png)
 
 ### 自定义es 版本依赖，与本地版本保持一直
 
@@ -116,13 +116,13 @@ SpringBoot默认使用7.6.2,与本地版本不一致会连接不成功。
 		<elasticsearch.version>7.8.1</elasticsearch.version>
 	</properties>
 ```
-![image-20200802231614736](https://gitee.com/Post-90sBadKid/imageshack/raw/master/image-20200802231614736.png)
+![image-20200802231614736](https://gitee.com/BadKid90s/imageshack/blob/other/image-20200802231614736.png)
 
 ### 
 
 ### 自动配置
 
-![image-20200802231807542](https://gitee.com/Post-90sBadKid/imageshack/raw/master/image-20200802231807542.png)
+![image-20200802231807542](https://gitee.com/BadKid90s/imageshack/blob/other/image-20200802231807542.png)
 
 ### application.yml
 
@@ -188,9 +188,9 @@ class EsApiApplicationTests {
 ```
 
 
-![image-20200802232058865](https://gitee.com/Post-90sBadKid/imageshack/raw/master/image-20200802232058865.png)
+![image-20200802232058865](https://gitee.com/BadKid90s/imageshack/blob/other/image-20200802232058865.png)
 
-![image-20200802232120173](https://gitee.com/Post-90sBadKid/imageshack/raw/master/image-20200802232120173.png)
+![image-20200802232120173](https://gitee.com/BadKid90s/imageshack/blob/other/image-20200802232120173.png)
 
 
 ### 判断索引是否存在
@@ -213,7 +213,7 @@ class EsApiApplicationTests {
     
 ```
 
-![image-20200802232203179](https://gitee.com/Post-90sBadKid/imageshack/raw/master/image-20200802232203179.png)
+![image-20200802232203179](https://gitee.com/BadKid90s/imageshack/blob/other/image-20200802232203179.png)
 
 ### 删除索引
 
@@ -234,9 +234,9 @@ class EsApiApplicationTests {
     }
 ```
 
-![image-20200802232231687](https://gitee.com/Post-90sBadKid/imageshack/raw/master/image-20200802232231687.png)
+![image-20200802232231687](https://gitee.com/BadKid90s/imageshack/blob/other/image-20200802232231687.png)
 
-![image-20200802232525542](https://gitee.com/Post-90sBadKid/imageshack/raw/master/image-20200802232525542.png)
+![image-20200802232525542](https://gitee.com/BadKid90s/imageshack/blob/other/image-20200802232525542.png)
 
 ## 文档 API 操作
 
@@ -297,9 +297,9 @@ public class User {
 
 ```
 
-![image-20200802232349921](https://gitee.com/Post-90sBadKid/imageshack/raw/master/image-20200802232349921.png)
+![image-20200802232349921](https://gitee.com/BadKid90s/imageshack/blob/other/image-20200802232349921.png)
 
-![image-20200802232653106](https://gitee.com/Post-90sBadKid/imageshack/raw/master/image-20200802232653106.png)
+![image-20200802232653106](https://gitee.com/BadKid90s/imageshack/blob/other/image-20200802232653106.png)
 
 ###  判断文档是否存在
 
@@ -324,7 +324,7 @@ public class User {
 
 ```
 
-![image-20200802232752850](https://gitee.com/Post-90sBadKid/imageshack/raw/master/image-20200802232752850.png)
+![image-20200802232752850](https://gitee.com/BadKid90s/imageshack/blob/other/image-20200802232752850.png)
 
 ###  查询文档内容
 
@@ -348,7 +348,7 @@ public class User {
 
 ```
 
-![image-20200802232856318](https://gitee.com/Post-90sBadKid/imageshack/raw/master/image-20200802232856318.png)
+![image-20200802232856318](https://gitee.com/BadKid90s/imageshack/blob/other/image-20200802232856318.png)
 
 ### 更新文档
 
@@ -378,7 +378,7 @@ public class User {
 
 ```
 
-![image-20200802233004057](https://gitee.com/Post-90sBadKid/imageshack/raw/master/image-20200802233004057.png)
+![image-20200802233004057](https://gitee.com/BadKid90s/imageshack/blob/other/image-20200802233004057.png)
 
 ### 删除文档
 
@@ -401,7 +401,7 @@ public class User {
     }
 ```
 
-![image-20200802233030746](https://gitee.com/Post-90sBadKid/imageshack/raw/master/image-20200802233030746.png)
+![image-20200802233030746](https://gitee.com/BadKid90s/imageshack/blob/other/image-20200802233030746.png)
 
 ### 批量操作文档内容
 
@@ -437,9 +437,9 @@ public class User {
 ```
 
 
-![image-20200802233054885](https://gitee.com/Post-90sBadKid/imageshack/raw/master/image-20200802233054885.png)
+![image-20200802233054885](https://gitee.com/BadKid90s/imageshack/blob/other/image-20200802233054885.png)
 
-![](https://gitee.com/Post-90sBadKid/imageshack/raw/master/image-20200802233116205.png)[image-20200802233116205](ElasticSearch学习.assets/image-20200802233116205.png)
+![](https://gitee.com/BadKid90s/imageshack/blob/other/image-20200802233116205.png)[image-20200802233116205](ElasticSearch学习.assets/image-20200802233116205.png)
 
 ### 查询文档
 

@@ -19,11 +19,11 @@ PUT /索引名/~类型名~ /文档Id
 ```
 
 
-![image-20211204170057923](https://gitee.com/Post-90sBadKid/imageshack/raw/master/image-20211204170057923.png)
+![image-20211204170057923](https://gitee.com/BadKid90s/imageshack/blob/other/image-20211204170057923.png)
 
-![](https://gitee.com/Post-90sBadKid/imageshack/raw/master/3b6471ad-761d-4389-9c9c-82ffbfae9ed1.png)
+![](https://gitee.com/BadKid90s/imageshack/blob/other/3b6471ad-761d-4389-9c9c-82ffbfae9ed1.png)
 
-![](https://gitee.com/Post-90sBadKid/imageshack/raw/master/9ab4a007-1fdf-41b5-98c9-c9dd4b942a3d.png)
+![](https://gitee.com/BadKid90s/imageshack/blob/other/9ab4a007-1fdf-41b5-98c9-c9dd4b942a3d.png)
 
 ### 定义一个设置数据类型的索引
 
@@ -46,7 +46,7 @@ PUT /test1
 }
 ```
 
-![](https://gitee.com/Post-90sBadKid/imageshack/raw/master/1e6166ef-d8e0-4b65-86c5-c9b9440449c8.png)
+![](https://gitee.com/BadKid90s/imageshack/blob/other/1e6166ef-d8e0-4b65-86c5-c9b9440449c8.png)
 
 ### 获取索引信息
 
@@ -54,7 +54,7 @@ PUT /test1
 GET /test1
 ```
 
-![](https://gitee.com/Post-90sBadKid/imageshack/raw/master/9a4d53a9-0acb-40df-8b72-d4a2dda7a76f.png)
+![](https://gitee.com/BadKid90s/imageshack/blob/other/9a4d53a9-0acb-40df-8b72-d4a2dda7a76f.png)
 
 ### 查看默认信息
 
@@ -69,7 +69,7 @@ PUT /test2/_doc/1
 }
 ```
 
-![](https://gitee.com/Post-90sBadKid/imageshack/raw/master/717a0d84-96e9-4190-a9b1-cdfbd86203c4.png)
+![](https://gitee.com/BadKid90s/imageshack/blob/other/717a0d84-96e9-4190-a9b1-cdfbd86203c4.png)
 
 查看默认信息
 
@@ -79,7 +79,7 @@ GET /test2
 
 如果自己得文档字段没有指定，那么ES 就会自己给我们默认设置字段类型！
 
-![image-20211204170245851](https://gitee.com/Post-90sBadKid/imageshack/raw/master/image-20211204170245851.png)
+![image-20211204170245851](https://gitee.com/BadKid90s/imageshack/blob/other/image-20211204170245851.png)
 
 
 
@@ -114,7 +114,7 @@ GET _cat/indices?v
   }
   ```
 
-  ![](https://gitee.com/Post-90sBadKid/imageshack/raw/master/c7076451-97a8-454c-aa36-a61b69bc434f.png)
+  ![](https://gitee.com/BadKid90s/imageshack/blob/other/c7076451-97a8-454c-aa36-a61b69bc434f.png)
 
 - 修改
 
@@ -127,7 +127,7 @@ GET _cat/indices?v
   }
   ```
 
-  ![](https://gitee.com/Post-90sBadKid/imageshack/raw/master/07e756b2-6ac0-4dc3-9978-a04bd775e921.png)
+  ![](https://gitee.com/BadKid90s/imageshack/blob/other/07e756b2-6ac0-4dc3-9978-a04bd775e921.png)
 
 版本号会增加，状态更新。
 
@@ -137,6 +137,6 @@ GET _cat/indices?v
 DELETE test
 ```
 
-![](https://gitee.com/Post-90sBadKid/imageshack/raw/master/bc1173a3-56da-4e0e-8254-300585f88148.png)
+![](https://gitee.com/BadKid90s/imageshack/blob/other/bc1173a3-56da-4e0e-8254-300585f88148.png)
 
-![](https://gitee.com/Post-90sBadKid/imageshack/raw/master/127b675e-defe-4376-985f-6885ad7b147f.png)
+![](https://gitee.com/BadKid90s/imageshack/blob/other/127b675e-defe-4376-985f-6885ad7b147f.png)
