@@ -1,4 +1,11 @@
-# Hadoop
+---
+title: Hadoop
+date: 2023-02-21
+tags:
+- Hadoop
+categories:
+- Hadoop
+---
 
 ## Hadoop是什么
 
@@ -119,17 +126,17 @@ MapReduce 将计算过程分为两个阶段：map 和 Reduce
 
   在 `/etc/profile`文件的最后加
 
-  ```bash
+  ``` bash
   export HADOOP_HOME=/usr/local/hadoop-3.2.1
   export PATH=$PATH:$HADOOP_HOME/bin
   export PATH=$PATH:$HADOOP_HOME/sbin
-  ```
+  ``` 
 
   使用配置生效
 
-  ```bash
+  ``` bash
   $ source /ect/profile
-  ```
+  ``` 
 
 ### 4.Hadoop目录结构
 
@@ -171,58 +178,58 @@ Hadoop运行模式包括：
 
 1.创建在hadoop-3.2.1文件下面创建一个input文件夹
 
-```bash
+``` bash
 $ mkdir input
-```
+``` 
 
 2.将Hadoop的xml配置文件复制到input
 
-```bash
+``` bash
 $ cp  etc/hadoop/*.xml  input
-```
+``` 
 
 3.执行share目录下的MapReduce程序
 
-```bash
+``` bash
 $ bin/hadoop	jar share/hadoop/mapreduce/hadoop-mapreduce-examples-3.2.1.jar grep input  output  'dfs[a-z.]+'
-```
+``` 
 
 4.查看输出结果
 
-```ba
+``` bash
 cat  output/*
-```
+``` 
 
 #### 官方WordCount案例
 
 1.创建在hadoop-3.2.1文件下面创建一个wcinput文件夹
 
-```bas
+``` bash
 mkdir wcinput
-```
+``` 
 
 2.在wcinput文件下创建一个wc.input文件
 
-```bash
+``` bash
 $ cd wcinput
 
 $ touchwc.input
-```
+``` 
 
 3.编辑wc.input文件
 
-```bash
+``` bash
 $ vim  wc.input
-```
+``` 
 
 在文件中输入如下内容
 
-```
+``` 
 hadoopyarn
 hadoopmapreduce
 atguigu
 atguigu
-```
+``` 
 
 保存退出：：wq
 
@@ -230,22 +237,22 @@ atguigu
 
 5.执行程序
 
-```bash
+``` bash
 $ hadoop jar share/hadoop/mapreduce/hadoop-mapreduce-examples-3.2.1.jar wordcount wcinput wcoutput
-```
+``` 
 
 6.查看结果
 
-```bash
+``` bash
 $ cat wcoutput /part-r-00000
-```
+``` 
 
-```
+``` 
 atguigu2
 hadoop2
 mapreduce1
 yarn1
-```
+``` 
 
 
 
@@ -265,31 +272,31 @@ yarn1
 
 进入Hadoop的etc目录
 
-```bash
+``` bash
 $ cd ./etc
-```
+``` 
 
 - 配置：hadoop-env.sh
 
   Linux系统中获取JDK的安装路径：
 
-  ```bash
+  ``` bash
   $ echo $JAVA_HOME
-  ```
+  ``` 
 
-  ```bash
+  ``` bash
   /usr/local/jdk1.8.0_121
-  ```
+  ``` 
 
   修改JAVA_HOME路径：
 
-  ```bash
+  ``` bash
   export JAVA_HOME=/usr/local/jdk1.8.0_121
-  ```
+  ``` 
 
 - 配置：core-site.xml
 
-  ```xml
+  ``` xml
   <!--指定HDFS中NameNode的地址-->
   <property>
   	<name>fs.defaultFS</name>
@@ -300,53 +307,53 @@ $ cd ./etc
   	<name>hadoop.tmp.dir</name>
   	<value>/usr/local/hadoop-3.2.1/data/tmp</value>
   </property>
-  ```
+  ``` 
 
 - 配置：hdfs-site.xml
 
-  ```xml
+  ``` xml
   <!--指定HDFS副本的数量-->
   <property>
   	<name>dfs.replication</name>
   	<value>1</value>
   </property>
-  ```
+  ``` 
 
 ###### （2）设置无密码SSH
 
 - 现在检查您是否可以在不使用密码的情况下SSH到本地主机：
 
-  ```bash
+  ``` bash
    $ ssh  localhost
-  ```
+  ``` 
 
   如果没有密码就无法SSH到本地主机
 
 - 请执行以下命令
 
-  ```bash
+  ``` bash
   $ ssh-keygen -t rsa -P''-f〜/ .ssh / id_rsa 
   $ cat〜/ .ssh / id_rsa.pub >>〜/ .ssh / authorized_keys 
   $ chmod 0600〜/ .ssh / authorized_keys
-  ```
+  ``` 
 
 ###### （3）执行
 
 - 格式化文件系统
 
-  ```bash
+  ``` bash
   $ bin/hdfs namenode -format
-  ```
+  ``` 
 
 - 启动NameNode守护程序和DataNode守护程序：
 
-  ```bash
+  ``` bash
   $ ./sbin/start-dfs.sh
-  ```
+  ``` 
 
 - 启动报错
 
-  ```bas
+  ``` bash
   [root@iZ2zednzb8iugz3kgudq9bZ hadoop-3.2.1]# ./sbin/stop-dfs.sh
   Stopping namenodes on [localhost]
   ERROR: Attempting to operate on hdfs namenode as root
@@ -357,51 +364,51 @@ $ cd ./etc
   Stopping secondary namenodes [iZ2zednzb8iugz3kgudq9bZ]
   ERROR: Attempting to operate on hdfs secondarynamenode as root
   ERROR: but there is no HDFS_SECONDARYNAMENODE_USER defined. Aborting operation.
-  ```
+  ``` 
 
   添加以下配置到 `hadoop-env.sh`
 
-  ```bash
+  ``` bash
   HDFS_DATANODE_USER=root  
   HDFS_NAMENODE_USER=root  
   HDFS_SECONDARYNAMENODE_USER=root 
-  ```
+  ``` 
 
 - 浏览Web界面以查找NameNode；默认情况下，它在以下位置可用：
 
-  ```http
+  ``` http
   http://localhost:9870/
-  ```
+  ``` 
 
 - 设置执行MapReduce作业所需的HDFS目录：
 
-  ```bash
+  ``` bash
   $ bin/hdfs dfs -mkdir /user/root
   $ bin/hdfs dfs -mkdir /user/<用户名>
-  ```
+  ``` 
 
   - 创建多层目录
 
-  ```bash
+  ``` bash
   $ bin/hdfs dfs -mkdir -p  /user/wry
-  ```
+  ``` 
 
   ![image-20200822090658863](./assets/image-20200822090658863.png)
 
   - 查看多级目录
 
-  ```bash
+  ``` bash
   $ bin/hdfs dfs -ls -R /
-	```
+	``` 
 
   ![image-20200822090905199](./assets/image-20200822090905199.png)
   
 - 将本地输入文件复制到分布式文件系统中：
 
-  ```bash
+  ``` bash
   $ bin/hdfs dfs -mkdir -p /user/wry/input
   $ bin/hdfs dfs -put etc/hadoop/*.xml /user/wry/input
-  ```
+  ``` 
 
   ![image-20200822091216510](./assets/image-20200822091216510.png)
 
@@ -409,23 +416,23 @@ $ cd ./etc
 
 - 运行提供的一些示例：
 
-  ```bash
+  ``` bash
   $ bin/hadoop jar share/hadoop/mapreduce/hadoop-mapreduce-examples-3.2.1.jar grep /user/wry/input /user/wry/output 'dfs[a-z.]+'
-  ```
+  ``` 
 
   ![image-20200822091809558](./assets/image-20200822091809558.png)
 
   - 查看文件
 
-    ```bash
+    ``` bash
     $ bin/hdfs dfs -ls -r /user/wry/output
-    ```
+    ``` 
 
   - 查看分布式文件系统上的输出文件：
 
-    ```bash
+    ``` bash
     $ bin/hdfs dfs -cat /user/wry/output/<文件名>
-    ```
+    ``` 
 
     ![image-20200822092048172](./assets/image-20200822092048172.png)
 
@@ -433,18 +440,18 @@ $ cd ./etc
 
   - 检查输出文件：将输出文件从分布式文件系统复制到本地文件系统并检查它们：
 
-    ```bash
+    ``` bash
     $ bin/hdfs dfs -get /user/wry/output /usr/local/wryoutput 
     $ cat /usr/local/wryoutput/*
-    ```
+    ``` 
 
     ![image-20200822093255847](./assets/image-20200822093255847.png)
 
 - 完成后，使用以下命令停止守护进程：
 
-  ```bash
+  ``` bash
   $ sbin/stop-dfs.sh
-  ```
+  ``` 
 
 >**格式化NameNode 时要注意**
 >
@@ -476,7 +483,7 @@ $ cd ./etc
 
 配置`etc/hadoop/mapred-site.xml`:
 
-```xml
+``` xml
 <configuration>
     <!--用于指定执行MapReduce作业的运行时框架。可以是local、classic 或yarn之一 -->
     <property>
@@ -490,13 +497,13 @@ $ cd ./etc
         <value>$HADOOP_MAPRED_HOME/share/hadoop/mapreduce/*:$HADOOP_MAPRED_HOME/share/hadoop/mapreduce/lib/*</value>
     </property>
 </configuration>
-```
+``` 
 
 
 
 配置`etc/hadoop/yarn-site.xml`:
 
-```xml
+``` xml
 <configuration>
     <!--指Reduce 获取数据的方式-->
     <property>
@@ -515,13 +522,13 @@ $ cd ./etc
 	<value>0.0.0.0</value>
 </property>
 </configuration>
-```
+``` 
 
 启动
 
-```bash
+``` bash
 $ sbin/start-yarn.sh
-```
+``` 
 
 启动报错
 
@@ -529,10 +536,10 @@ $ sbin/start-yarn.sh
 
 配置`etc/hadoop/hadoop-env.sh`
 
-```bash
+``` bash
 export YARN_RESOURCEMANAGER_USER=root
 export YARN_NODEMANAGER_USER=root
-```
+``` 
 
 ![image-20200822102024933](./assets/image-20200822102024933.png)
 
@@ -548,21 +555,21 @@ ResourceManager - `http://localhost:8088/`
 
 - 拷贝文件到hadoop 目录
 
-```bash
+``` bash
 $ bin/hdfs dfs -put wcinput/wc.input  /user/wry/wcinput
-```
+``` 
 
 - 运行
 
-```bash
+``` bash
 $ bin/hadoop jar share/hadoop/mapreduce/hadoop-mapreduce-examples-3.2.1.jar wordcount /user/wry/wcinput /user/wry/wcoutput
-```
+``` 
 
 - 查看
 
-```bash
+``` bash
 $ bin/hadoop dfs -ls -r /user/wry/wcoutput
-```
+``` 
 
 
 
@@ -574,7 +581,7 @@ $ bin/hadoop dfs -ls -r /user/wry/wcoutput
 
 - 配置`etc/hadoop/mapred-site.xml`
 
-```xml
+``` xml
 <!--历史服务器端地址-->
 <property>
 	<name>mapreduce.jobhistory.address</name>
@@ -585,19 +592,19 @@ $ bin/hadoop dfs -ls -r /user/wry/wcoutput
 	<name>mapreduce.jobhistory.webapp.address</name>
 	<value>0.0.0.0:19888</value>
 </property>
-```
+``` 
 
 - 启动历史服务器
 
-  ```bash
+  ``` bash
   $ sbin/mr-jobhistory-daemon.sh starthistoryserver
-  ```
+  ``` 
 
 - 查看历史服务器是否启动
 
-  ```bash
+  ``` bash
   $ jps
-  ```
+  ``` 
 
 - 查看JobHistory
 
@@ -615,7 +622,7 @@ HistoryManager。
 
 - 配置 `etc/hadoop/yarn-site.xml`
 
-  ```xml
+  ``` xml
   <!--日志聚集功能使能-->
   <property>
   	<name>yarn.log-aggregation-enable</name>
@@ -626,47 +633,47 @@ HistoryManager。
   	<name>yarn.log-aggregation.retain-seconds</name>
   	<value>604800</value>
   </property>
-  ```
+  ``` 
 
 - 关闭NodeManager、ResourceManager和HistoryManager
 
   - 关闭所有 包括 NodeManager、ResourceManager、Name Node、DataNode
 
-  ```bash
+  ``` bash
    $ sbin/stop-all.sh
-  ```
+  ``` 
 
   - 关闭  NodeManager、ResourceManager
 
-  ```bash
+  ``` bash
   $ sbin/stop-yarn.sh
-  ```
+  ``` 
 
   - 关闭  Name Node、DataNode
 
-  ```bash
+  ``` bash
   $ sbin/stop-dfs.sh
-  ```
+  ``` 
 
   - 关闭  HistoryManager
 
-  ```bash
+  ``` bash
   $ sbin/mr-jobhistory-daemon.sh stop historyserver 
-  ```
+  ``` 
 
 - 启动NodeManager、ResourceManager和HistoryManager
 
 - 删除HDFS上已经存在的输出文件
 
-  ```bash
+  ``` bash
   $ bin/hadoop dfs -rm -f -r /user/wry/wcoutput
-  ```
+  ``` 
 
 - 执行WordCount程序
 
-  ```bash
+  ``` bash
   $ bin/hadoop jar share/hadoop/mapreduce/hadoop-mapreduce-examples-3.2.1.jar wordcount /user/wry/wcinput /user/wry/wcoutput
-  ```
+  ``` 
 
 - 查看日志，如图所示
 
@@ -717,11 +724,11 @@ $HADOOP_HOME/etc/hadoop这个路径上，用户可以根据项目需求重新进
 
 ##### （1）改IP地址
 
-```bash
+``` bash
 $ vim /etc/sysconfig/network-scripts/ifcfg-ens33 
-```
+``` 
 
-```bash
+``` bash
 TYPE=Ethernet
 PROXY_METHOD=none
 BROWSER_ONLY=no
@@ -746,23 +753,23 @@ DNS2=223.6.6.6
 
 PREFIX=24
 
-```
+``` 
 
 ##### （2）改主机名
 
 不配置后期的数据节点可能会找不到。
 
-```bash
+``` bash
 $ vim /etc/hotos
-```
+``` 
 
-```bash
+``` bash
 127.0.0.1   localhost localhost.localdomain localhost4 localhost4.localdomain4
 ::1         localhost localhost.localdomain localhost6 localhost6.localdomain6
 192.168.100.102 hadoop102
 192.168.100.103 hadoop103
 192.168.100.104 hadoop104
-```
+``` 
 
 
 
@@ -776,32 +783,32 @@ $ vim /etc/hotos
 
 ###### （2）基本语法
 
-```bash
+``` bash
 scp		-r  	$pdir/$fname		$user@hadoop$host:$pdir/$fname
 命令	  递归	 要拷贝的文件路径	   名称目的用户@主机:目的路径/名称
-```
+``` 
 
 ###### （3）案例实操
 
 （a）在`192.168.100.101`上，将`192.168.100.101`中`/usr/local/software`目录下的软件拷贝到`192.168.100.102`上。
 
-```bash
+``` bash
 $ scp -r /usr/local/software/*  root@192.168.100.102:/usr/local/software
-```
+``` 
 
 （b）在`192.168.100.103`上，将`192.168.100.101`服务器上的`/usr/local/software`目录下的软件拷贝到
 `192.168.100.103`上。
 
-```bash
+``` bash
 $ scp -r root@192.168.100.101:/usr/local/software/*  /usr/local/software/
-```
+``` 
 
 （c）在`192.168.100.103`上操作将`192.168.100.101`中`/usr/local/software`目录下的软件拷贝到
 `192.168.100.104`上。
 
-```bash
+``` bash
 $ scp -r root@192.168.100.101:/usr/local/software/*  root@192.168.100.104:/usr/local/software/
-```
+``` 
 
 ##### 2.rsync远程同步工具
 
@@ -813,10 +820,10 @@ $ scp -r root@192.168.100.101:/usr/local/software/*  root@192.168.100.104:/usr/l
 
 ###### （1）基本语法
 
-```bash
+``` bash
 rsync	-rvl		$pdir/$fname			$user@hadoop$host:$pdir/$fname
 命令	  选项参数		要拷贝的文件路径/名称		目的用户@主机:目的路径/名称
-```
+``` 
 
 选项参数说明
 
@@ -831,9 +838,9 @@ rsync	-rvl		$pdir/$fname			$user@hadoop$host:$pdir/$fname
 （a）把`192.168.100.101`机器上的`/usr/local/software`目录同步到`192.168.100.102`服务器的root用户
 下的`/usr/local/software`目录
 
-```bash
+``` bash
 $ rsync  -rvl /usr/local/software/*  root@192.168.100.102:/usr/local/software/
-```
+``` 
 
 ##### 3.xsync集群分发脚本
 
@@ -845,9 +852,9 @@ $ rsync  -rvl /usr/local/software/*  root@192.168.100.102:/usr/local/software/
 
 （a）rsync命令原始拷贝：
 
-```bash
+``` bash
 rsync -rvl  /usr/local/program/*  root@192.168.100.103:/usr/local/program/
-```
+``` 
 
 （b）期望脚本：
 xsync要同步的文件名称
@@ -857,16 +864,16 @@ xsync要同步的文件名称
 
 （a）在`/home/<用户名>/bin`目录下创建bin目录，并在bin目录下xsync创建文件，文件内容如下：
 
-```bash
+``` bash
 $ cd /home/<用户名>
 $ mkdir bin
 $ cd bin
 $ vim xsync
-```
+``` 
 
 
 
-```bash
+``` bash
 #!/bin/bash
 #1获取输入参数个数，如果没有参数，直接退出
 pcount=$#
@@ -888,19 +895,19 @@ for((host=103;host<105;host++));do
 echo -------------------192.168.100.$host--------------
 rsync -rvl $pdir/$fname  $user@192.168.100.$host:$pdir
 done
-```
+``` 
 
 （b）修改脚本xsync具有执行权限
 
-```bash
+``` bash
 $ chmod 777 xsync
-```
+``` 
 
 （c）调用脚本形式：xsync文件名称
 
-```bash
+``` bash
 $ xsync  /home/<用户名>/bin
-```
+``` 
 
 
 
@@ -930,14 +937,14 @@ $ xsync  /home/<用户名>/bin
 
 配置`etc/hadoop/core-site.xml`
 
-```bash
+``` bash
 $ cd /usr/local/program/hadoop3.2.1
 $ vim etc/hadoop/core-site.xml
-```
+``` 
 
 在该文件中编写如下配置
 
-```xml
+``` xml
 <!--指定HDFS中NameNode的地址-->
 <property>
 	<name>fs.defaultFS</name>
@@ -948,23 +955,23 @@ $ vim etc/hadoop/core-site.xml
 	<name>hadoop.tmp.dir</name>
 	<value>/usr/local/program/hadoop-3.2.1/data/tmp/hadoop-${user.name}</value>
 </property>
-```
+``` 
 
 ###### （2）HDFS配置文件
 
 配置`etc/hadoop/hadoop-env.sh`
 
-```bash
+``` bash
 export JAVA_HOME=/usr/local/program/jdk1.8 
 
 export HDFS_DATANODE_USER=root  
 export HDFS_NAMENODE_USER=root  
 export HDFS_SECONDARYNAMENODE_USER=root 
-```
+``` 
 
 配置`etc/hadoop/hdfs-site.xml`
 
-```xml
+```  xml
 <property>
 	<name>dfs.replication</name>
     <value>3</value>
@@ -981,28 +988,28 @@ export HDFS_SECONDARYNAMENODE_USER=root
 </property>
 
 
-```
+``` 
 
 ###### （3）YARN配置文件
 
 一般在 shell中输入
 
-```bash
+``` bash
 $ hadoop  classpath
-```
+``` 
 
 然后 这些输出 直接 粘贴到 yarn 的配置文件里 yarn-site.xml的属性 <name>yarn.application.classpath</name>赋值
 
 配置`etc/hadoop/hadoop-env.sh`
 
-```bash
+``` bash
 export YARN_RESOURCEMANAGER_USER=root
 export YARN_NODEMANAGER_USER=root
-```
+``` 
 
 配置`etc/hadoop/yarn-site.xml`
 
-```xml
+``` xml
 <!--用于指定执行MapReduce作业的运行时框架。可以是local、classic 或yarn之一 -->
 <property>
 	<name>mapreduce.framework.name</name>
@@ -1029,13 +1036,13 @@ export YARN_NODEMANAGER_USER=root
     <value>org.apache.hadoop.mapred.ShuffleHandler</value>
 </property>
 
-```
+``` 
 
 ###### （4）MapReduce配置文件
 
 配置`etc/hadoop/mapred-site.xml`
 
-```xml
+``` xml
 <!--指定MR运行在Yarn上-->
 <property>
 	<name>mapreduce.framework.name</name>
@@ -1045,13 +1052,13 @@ export YARN_NODEMANAGER_USER=root
 <property>
 	<name>mapreduce.application.classpath</name>     <value>$HADOOP_MAPRED_HOME/share/hadoop/mapreduce/*:$HADOOP_MAPRED_HOME/share/hadoop/mapreduce/lib/*</value>
 </property>
-```
+``` 
 
 ##### 3.在集群上分发配置好的Hadoop配置文件
 
-```bash
+``` bash
 $ xsync ./etc/hadoop/
-```
+``` 
 
 ##### 4.查看文件分发情况
 
@@ -1059,21 +1066,21 @@ $ xsync ./etc/hadoop/
 
 （1）如果集群是第一次启动，需要格式化`NameNode`
 
-```bash
+``` bash
 $  bin/hdfs namenode -formart
-```
+``` 
 
 （2）在`192.168.100.102`上启动`NameNode`
 
-```bash
+``` bash
 $ sbin/hadoop-daemon.sh  start namenode
-```
+``` 
 
 （3）在`192.168.100.102`,`192.168.100.103`以及`192.168.100.104`上分别启动`DataNode`
 
-```bash
+``` bash
 $ sbin/hadoop-daemon.sh  start datanode
-```
+``` 
 
 （4）思考：每次都一个一个节点启动，如果节点数增加到1000个怎么办？
 			早上来了开始一个一个节点启动，到晚上下班刚好完成，下班？
@@ -1086,7 +1093,7 @@ $ sbin/hadoop-daemon.sh  start datanode
 			ssh另一台电脑的ip地址
 （2）ssh连接时出现Hostkeyverificationfailed的解决方法
 
-```bash
+``` bash
 $ ssh  192.168.1.103
 Theauthenticityofhost'192.168.1.103(192.168.1.103)'can't
 beestablished.
@@ -1094,7 +1101,7 @@ RSAkeyfingerprintis
 cf:1e:de:d7:d0:4c:2d:98:60:b4:fd:ae:b1:2d:ad:06.
 Areyousureyouwanttocontinueconnecting(yes/no)?
 Hostkeyverificationfailed.
-```
+``` 
 
 （3）解决方案如下：直接输入yes
 
@@ -1106,20 +1113,20 @@ Hostkeyverificationfailed.
 
 （2）`192.168.100.102`生成公钥和私钥：
 
-```bash
+``` bash
 $ cd /root/.ssh
 $ ssh-keygen -t rsa
-```
+``` 
 
 然后敲（三个回车），就会生成两个文件id_rsa（私钥）、id_rsa.pub（公钥）
 
 （3）将公钥拷贝到要免密登录的目标机器上
 
-```bash
+``` bash
 $ ssh-copy-id 192.168.100.102
 $ ssh-copy-id 192.168.100.103
 $ ssh-copy-id 192.168.100.104
-```
+``` 
 
 （4）`192.168.100.103`生成公钥和私钥,进行公钥拷贝到要免密登录的目标机器上
 
@@ -1137,17 +1144,17 @@ $ ssh-copy-id 192.168.100.104
 
 ##### 1.配置`etc/hadoop/workers`
 
-```bash
+``` bash
 $ vim etc/hadoop/workers 
-```
+``` 
 
 添加以下节点
 
-```bash
+``` bash
 192.168.100.102
 192.168.100.103
 192.168.100.104
-```
+``` 
 
 >#### 注意：
 >
@@ -1159,35 +1166,35 @@ $ vim etc/hadoop/workers
 
 需要格式化NameNode（注意格式化之前，一定要先停止上次启动的所有namenode和datanode进程，然后再删除data和log数据）
 
-```bash
+``` bash
 $ bin/hdfs namenode -format
-```
+``` 
 
 ###### （2）启动HDFS
 
-```bash
+``` bash
 $ sbin/start-dfs.sh
-```
+``` 
 
 `jps`查看是否启动
 
 ###### （3）启动`YARN`
 
-```bash
+``` bash
 $ sbin/start-yarn.sh
-```
+``` 
 
 ###### （3）Web端查看`SecondaryNameNode`
 
-```http
+``` http
 http://192.168.100.102:9870/
-```
+``` 
 
 ###### （4）查看文件系统的基本数据
 
- ```bash
+ ``` bash
 $ bin/hdfs dfsadmin -report
- ```
+ ``` 
 
 
 
@@ -1199,19 +1206,19 @@ $ bin/hdfs dfsadmin -report
 
 ###### （1）上传文件到集群
 
-```bash
+``` bash
 $ bin/hdfs dfs -put  ./wcinput/wc.input  /user/wry/input
-```
+``` 
 
 ###### （2）上传文件后查看文件存放在什么位置
 
-```bash
+``` bash
 $ pwd
-```
+``` 
 
-```bash
+``` bash
 /usr/local/program/hadoop-3.2.1/data/tmp/hadoop-root/dfs/data/current/BP-719430212-127.0.0.1-1598525636602/current/finalized/subdir0/subdir0
-```
+``` 
 
 
 
@@ -1221,29 +1228,29 @@ $ pwd
 
 ###### （1）分别启动/停止HDFS组件
 
-```bash
+``` bash
 $ sbin/hadoop-daemon.sh start/stop  namenode/datanode/secondarynamenode
-```
+``` 
 
 ###### （2）启动/停止YARN
 
-```bash
+``` bash
 $ sbin/yarn-daemon.sh  start/stop  resourcemanager/nodemanager
-```
+``` 
 
 ##### 2.各个模块分开启动/停止（配置ssh是前提）常用
 
 ###### （1）整体启动/停止HDFS
 
-```bash
+``` bash
 $ sbin/start-dfs.sh/stop-dfs.sh
-```
+``` 
 
 ###### （2）整体启动/停止YARN
 
-```bash
+``` bash
 $ sbin/start-yarn.sh/stop-yarn.sh
-```
+``` 
 
 ### crontab定时任务设置
 
@@ -1261,15 +1268,15 @@ crontab [选项]
 
 #### 参数说明
 
-```bash
+``` bash
 $ crontab -e
-```
+``` 
 
 ##### （1）进入crontab编辑界面。会打开vim 编辑你的工作
 
-```
+``` 
 * * * * *  执行的任务
-```
+``` 
 
 | 项目      | 含义                 | 范围                    |
 | --------- | -------------------- | ----------------------- |
@@ -1303,9 +1310,9 @@ $ crontab -e
 
 - 每隔1分钟，向`/root/bailongma.txt`文件中添加一个11 的数字。
 
-  ```bash
+  ``` bash
   */1 * * * * /bin/echo "11" >>/root/bailongma.txt
-  ```
+  ``` 
 
 
 
@@ -1345,7 +1352,7 @@ C类默认的子网掩码：255.255.255.0
 
  以root权限登陆centos8并编辑vi /etc/sysconfig/network-scripts/ifcfg-ens33这个文件，效果如下：
 
-```bash
+``` bash
 TYPE=Ethernet
 PROXY_METHOD=none
 BROWSER_ONLY=no
@@ -1366,7 +1373,7 @@ IPADDR=192.168.0.150 #再网关的范围内随意写
 NETMASK=255.255.255.0 #子网掩码
 DNS1=8.8.8.8 #DNS1这里用谷歌,
 DNS2=223.6.6.6 #DNS2用阿里
-```
+``` 
 
 然后 :wq保存退出
 
@@ -1386,63 +1393,63 @@ centos8
 
 #### 永久关闭防火墙
 
-```bash
+``` bash
 $ systemctl disable firewalld
-```
+``` 
 
 #### 查看防火墙
 
-```bash
+``` bash
 $ systemctl status firewalld.service
-```
+``` 
 
 #### 停止防火墙
 
-```bash
+``` bash
 $ systemctl stop firewalld.service
-```
+``` 
 
 #### 启用防火墙
 
-```bash
+``` bash
 $ systemctl start firewalld.service
-```
+``` 
 
 ### 配置JDK
 
 #### 第一步：解压
 
-```bash
+``` bash
 $ tar -zxvf /usr/local/software/jdk1.8.231 -C /usr/local/program/
-```
+``` 
 
 #### 第二步：配置环境变量
 
-```bash
+``` bash
 $ vim /etc/profile
-```
+``` 
 
 在最后添加java 环境配置
 
-```bash
+``` bash
 export JAVA_HOME=/usr/local/program/jdk1.8.231
 export CLASS_PATH=.:$JAVA_HOME/lib.tools.jar
 export PATH=$PATH:$JAVA_HOME/bin
-```
+``` 
 
 #### 第三步：使配置生效
 
-```bash
+``` bash
 $ source /etc/profile
-```
+``` 
 
 ### 配置SSH连接
 
 #### 第一步：修改配置
 
-```bash
+``` bash
 $ vim /etc/ssh/sshd_config
-```
+``` 
 
 打开 注释修改以下配置
 
@@ -1456,13 +1463,13 @@ ClientAliveCountMax表示服务器发出请求后客户端没有响应的次数�
 
 #### 第二步：重启服务
 
-```bash
+``` bash
 $ service sshd restart
-```
+``` 
 
 
 
-```bash
+``` bash
 tar -zxvf /usr/local/software/hadoop-3.2.1.tar.gz  -C /usr/local/program/
 
 vim /etc/profile
@@ -1475,5 +1482,5 @@ export PATH=$PATH:$HADOOP_HOME/sbin
 source /etc/profile
 
 hadoop version
-```
+``` 
 

@@ -21,10 +21,10 @@ module.exports = [
                 "text": "ElasticSearch",
                 "link": "/docs/es/"
             },
-            {
-                "text": "Test",
-                "link": "/docs/test/"
-            },
+            // {
+            //     "text": "Test",
+            //     "link": "/docs/test/"
+            // },
         ]
     },
     {
@@ -33,7 +33,7 @@ module.exports = [
         "items": [
             {
                 "text": "GitHub",
-                "link": "https://github.com/recoluan",
+                "link": "https://github.com/BadKid90s",
                 "icon": "reco-github"
             }
         ]

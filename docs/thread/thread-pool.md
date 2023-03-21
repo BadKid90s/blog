@@ -2,9 +2,9 @@
 title: 创建线程那么容易，为什么非要让我使用线程池？
 date: 2023-03-21
 tags:
-- Thread-Pool
+- thread-Pool
 categories:
-- Thread-Pool
+- JAVA
 ---
 
 

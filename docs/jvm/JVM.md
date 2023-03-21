@@ -4,7 +4,7 @@ date: 2023-03-21
 tags:
 - jvm
 categories:
-- java
+- JAVA
 ---
 
 ## JVM 体系结构模型

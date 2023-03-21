@@ -2,9 +2,9 @@
 title: 并发编程
 date: 2023-03-21
 tags:
-- Thread
+- thread
 categories:
-- Thread
+- JAVA
 ---
 
 # 并发编程
@@ -3362,7 +3362,7 @@ class Threadsafe {
 
 - Hashtable
 
-- java.util.concurrent 包下的类
+- JAVA.util.concurrent 包下的类
 
 这里说它们是线程安全的是指，多个线程调用它们同一个实例的某个方法时，是线程安全的。也可以理解为
 

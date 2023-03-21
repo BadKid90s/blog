@@ -1,12 +1,11 @@
 module.exports = {
-    "/docs/test/": [
-        "",
-        "theme",
-        "plugin",
-        "api"
-    ],
+    // "/docs/test/": [
+    //     "",
+    //     "theme",
+    //     "plugin",
+    //     "api"
+    // ],
     "/docs/es/": [
-        "",
         "ElasticSearchStudy01",
         "ElasticSearchStudy02",
         "ElasticSearchStudy03",
