@@ -16,6 +16,6 @@ git init
 git add -A
 git commit -m 'deploy'
 
-git push -f git@github.com:Post-90sBadKid/blog.git master:main
+git push -f https://github.com/BadKid90s/blog.git main:main
 
 cd -

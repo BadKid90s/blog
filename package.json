@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "vuepress dev . --open --host \"localhost\"",
     "build": "vuepress build .",
-    "deploy": " deploy.sh",
+    "deploy": "sh deploy.sh",
     "deploy-bat": " deploy.bat"
   },
   "devDependencies": {
