@@ -16,7 +16,7 @@ module.exports = {
             "link",
             {
                 "rel": "icon",
-                "href": "/favicon.ico"
+                "href": "https://avatars.githubusercontent.com/u/44721378?s=64&v=4"
             }
         ],
         [
