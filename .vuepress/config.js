@@ -2,7 +2,7 @@ const sidebar = require('./sidebar')
 const nav = require('./nav')
 
 module.exports = {
-    "title": "Post90sBadKid的个人博客",
+    "title": "BadKid90s的个人博客",
     "description": "",
     "dest": "dist",
     "base":"/blog/",

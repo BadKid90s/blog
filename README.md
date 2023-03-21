@@ -1,6 +1,6 @@
 ---
 home: true
-heroText: Post90sBadKid
+heroText: BadKid90s
 tagline:  有道无术，术尚可求；有术无道止于术。
 heroTextStyle: {
   color: '#FFF'
