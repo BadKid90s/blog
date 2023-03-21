@@ -48,9 +48,9 @@ PUT /wry/_doc/4
 
 ```
 
-![](https://gitee.com/BadKid90s/imageshack/blob/other/2c2a64c5-a391-4389-afb3-58ff68e64e56.png)
+![](images/2c2a64c5-a391-4389-afb3-58ff68e64e56.png)
 
-![](https://gitee.com/BadKid90s/imageshack/blob/other/6cdd49b4-5d7b-4a51-81f9-9cf9ae09f412.png)
+![](images/6cdd49b4-5d7b-4a51-81f9-9cf9ae09f412.png)
 
 #### GET 获取文档数据
 
@@ -60,7 +60,7 @@ GET /wry/_doc/1
 
 
 
-![](https://gitee.com/BadKid90s/imageshack/blob/other/46374de1-ce5b-46f0-a9b2-ec546ae32117.png)
+![](images/46374de1-ce5b-46f0-a9b2-ec546ae32117.png)
 
 **`version` 代表记录被修改的次数**
 
@@ -78,7 +78,7 @@ PUT /wry/_doc/5
 }
 ```
 
-![](https://gitee.com/BadKid90s/imageshack/blob/other/c5c6bf93-8e41-4527-9850-5bd88f711549.png)
+![](images/c5c6bf93-8e41-4527-9850-5bd88f711549.png)
 **`version` 代表记录被修改的次数**
 
 `PUT`请求修改数据，如果请求体修改时少写字段，会丢失。
@@ -94,8 +94,8 @@ POST /wry/_doc/1/_update
 }
 ```
 
-![](https://gitee.com/BadKid90s/imageshack/blob/other/9f0c24fb-f026-42a8-8b15-d5294138f272.png)
-![](https://gitee.com/BadKid90s/imageshack/blob/other/f4c85eb5-7823-4629-9ae4-aa8ac542d0c5.png)
+![](images/9f0c24fb-f026-42a8-8b15-d5294138f272.png)
+![](images/f4c85eb5-7823-4629-9ae4-aa8ac542d0c5.png)
 
 
 
@@ -107,7 +107,7 @@ POST /wry/_doc/1/_update
 GET /wry/_doc/_search?q=name:李四
 ```
 
-![](https://gitee.com/BadKid90s/imageshack/blob/other/fa964ef9-a288-428a-b054-2490e1fafbf9.png)
+![](images/fa964ef9-a288-428a-b054-2490e1fafbf9.png)
 
 **`_score` 查询的匹配度越高分数越高**
 
@@ -128,7 +128,7 @@ GET /wry/_doc/_search
 
 精确匹配文档内容 name是Key,张三是Value
 
-![](https://gitee.com/BadKid90s/imageshack/blob/other/3073be71-e000-4933-9804-c49a7dbe522c.png)
+![](images/3073be71-e000-4933-9804-c49a7dbe522c.png)
 
 #### 字段过滤
 
@@ -147,7 +147,7 @@ GET /wry/_doc/_search
 
 使用`_source`选择需要查询的字段
 
-![](https://gitee.com/BadKid90s/imageshack/blob/other/b2a6ad55-6b34-417b-a81f-747f6f2537a1.png)
+![](images/b2a6ad55-6b34-417b-a81f-747f6f2537a1.png)
 
 #### 字段排序
 
@@ -170,7 +170,7 @@ GET /wry/_doc/_search
 ```
 
 使用`sort`进行排序，指定字段和排序方式
-![](https://gitee.com/BadKid90s/imageshack/blob/other/c0fd8c50-e6ea-4f16-bd8d-4d41172ee28c.png)
+![](images/c0fd8c50-e6ea-4f16-bd8d-4d41172ee28c.png)
 
 
 
@@ -192,7 +192,7 @@ GET /wry/_doc/_search
 }
 ```
 
-![](https://gitee.com/BadKid90s/imageshack/blob/other/d88198eb-5ded-4c56-bf1e-d6cf93721777.png)
+![](images/d88198eb-5ded-4c56-bf1e-d6cf93721777.png)
 
 
 #### 分页查询
@@ -213,7 +213,7 @@ GET /wry/_doc/_search
 `form` 从那条记录开始，`size` 每页显示多少条记录
 
 **数据下标是从`0`开始**
-![](https://gitee.com/BadKid90s/imageshack/blob/other/8b60b443-5e9c-454c-a01b-2f513ad03d75.png)
+![](images/8b60b443-5e9c-454c-a01b-2f513ad03d75.png)
 
 #### 布尔值查询 多条件匹配
 
@@ -243,7 +243,7 @@ GET /wry/_doc/_search
 }
 ```
 
-![](https://gitee.com/BadKid90s/imageshack/blob/other/b606e799-98c3-48bb-b24e-ce8848350470.png)
+![](images/b606e799-98c3-48bb-b24e-ce8848350470.png)
 
 #### 或条件查询
 
@@ -271,7 +271,7 @@ GET /wry/_doc/_search
 }
 ```
 
-![](https://gitee.com/BadKid90s/imageshack/blob/other/31a3f053-8e26-4051-bfeb-086738dfd359.png)
+![](images/31a3f053-8e26-4051-bfeb-086738dfd359.png)
 
 #### 不包含查询
 
@@ -299,7 +299,7 @@ GET /wry/_doc/_search
 }
 ```
 
-![](https://gitee.com/BadKid90s/imageshack/blob/other/71bd7d5d-fa64-48a1-afbb-b02f54d27d8e.png)
+![](images/71bd7d5d-fa64-48a1-afbb-b02f54d27d8e.png)
 
 
 #### 过滤条件查询
@@ -334,7 +334,7 @@ GET /wry/_doc/_search
 }
 ```
 
-![](https://gitee.com/BadKid90s/imageshack/blob/other/b87ece62-0890-4b27-88cc-bf9934d45d4c.png)
+![](images/b87ece62-0890-4b27-88cc-bf9934d45d4c.png)
 
 #### 短语匹配
 
@@ -351,7 +351,7 @@ GET /wry/_doc/_search
 }
 ```
 
-![image-20200804074951055](https://gitee.com/BadKid90s/imageshack/blob/other/image-20200804074951055.png)
+![image-20200804074951055](images/image-20200804074951055.png)
 
 和`match`查询类似，`match_phrase`查询首先解析查询字符串来产生一个词条列表。然后会搜索所有的词条，但只保留包含了所有搜索词条的文档，并且词条的位置要邻接。
 
@@ -372,7 +372,7 @@ GET /wry/_search
 
 ```
 
-![](https://gitee.com/BadKid90s/imageshack/blob/other/7e15f1b6-a10b-4bbf-a229-7ab9017fa3a0.png)
+![](images/7e15f1b6-a10b-4bbf-a229-7ab9017fa3a0.png)
 
 #### 精确查询
 
@@ -396,7 +396,7 @@ PUT /testdb/
 }
 ```
 
-![image-20200802230130398](https://gitee.com/BadKid90s/imageshack/blob/other/image-20200802230130398.png)
+![image-20200802230130398](images/image-20200802230130398.png)
 
 ##### 准备测试文档
 
@@ -414,14 +414,14 @@ PUT /testdb/_doc/2
 }
 ```
 
-![image-20200802230203947](https://gitee.com/BadKid90s/imageshack/blob/other/image-20200802230203947.png)
+![image-20200802230203947](images/image-20200802230203947.png)
 
 
 在这里发现一个坑，就是再`创建索引`的时候是`不用写类型`的,但是在插入数据的时候`必须指定文档类型`。否则会`报错`。
 
 **错误演示**
 
-![image-20200802230228873](https://gitee.com/BadKid90s/imageshack/blob/other/image-20200802230228873.png)
+![image-20200802230228873](images/image-20200802230228873.png)
 
 **我们重点说一下这里**
 
@@ -439,7 +439,7 @@ GET _analyze
 }
 ```
 
-![image-20200802230245660](https://gitee.com/BadKid90s/imageshack/blob/other/image-20200802230245660.png)
+![image-20200802230245660](images/image-20200802230245660.png)
 
 使用分词器查询，类型为标准`standard`,可以看到被分词器拆分了
 
@@ -452,7 +452,7 @@ GET _analyze
 
 ```
 
-![image-20200802230305586](https://gitee.com/BadKid90s/imageshack/blob/other/image-20200802230305586.png)
+![image-20200802230305586](images/image-20200802230305586.png)
 
 `name`属性是`text`类型，会被分词器进行解析处理成  【"张","三","学","习","ElasticSearch"】,  
 所以查询的时候只有输入以上被解析后的结果才能匹配到值进行输出。
@@ -468,7 +468,7 @@ GET /testdb/_search
 }
 ```
 
-![image-20200802230326924](https://gitee.com/BadKid90s/imageshack/blob/other/image-20200802230326924.png)
+![image-20200802230326924](images/image-20200802230326924.png)
 
 ```
 GET /testdb/_search
@@ -481,7 +481,7 @@ GET /testdb/_search
 }
 ```
 
-![image-20200802230351493](https://gitee.com/BadKid90s/imageshack/blob/other/image-20200802230351493.png)
+![image-20200802230351493](images/image-20200802230351493.png)
 
 
 输入`不是被解析的结果`进行查询，`匹配不到输出结果`。
@@ -497,7 +497,7 @@ GET /testdb/_search
 }
 ```
 
-![image-20200802230438720](https://gitee.com/BadKid90s/imageshack/blob/other/image-20200802230438720.png)
+![image-20200802230438720](images/image-20200802230438720.png)
 
 `desc`属性是`keyword`类型，不会被分词器进行解析。
 
@@ -513,7 +513,7 @@ GET /testdb/_search
 ```
 
 输入 `法外狂徒` 他会完全匹配，才能输出结果
-![image-20200802230456475](https://gitee.com/BadKid90s/imageshack/blob/other/image-20200802230456475.png)
+![image-20200802230456475](images/image-20200802230456475.png)
 
 ```
 GET /testdb/_search
@@ -526,7 +526,7 @@ GET /testdb/_search
 }
 ```
 
-![image-20200802230511853](https://gitee.com/BadKid90s/imageshack/blob/other/image-20200802230511853.png)
+![image-20200802230511853](images/image-20200802230511853.png)
 
 `term`查询是直接通过**倒排索引**指定的词条进行**精确查询**的。
 
@@ -558,16 +558,16 @@ PUT /testdb/_doc/5
 }
 ```
 
-![image-20200802230535141](https://gitee.com/BadKid90s/imageshack/blob/other/image-20200802230535141.png)
+![image-20200802230535141](images/image-20200802230535141.png)
 
 是不是在想`testdb索引`中没有`t1`和`t2`两个字段，
 这样写会`动态新增`2个字段的
 
 
-![image-20200802230720325](https://gitee.com/BadKid90s/imageshack/blob/other/image-20200802230720325.png)
+![image-20200802230720325](images/image-20200802230720325.png)
 
 并且`默认指定了类型`， `t1`是`text`类型，`t2`是`date`类型。
-![image-20200802230757400](https://gitee.com/BadKid90s/imageshack/blob/other/image-20200802230757400.png)
+![image-20200802230757400](images/image-20200802230757400.png)
 
 
 ```
@@ -596,7 +596,7 @@ GET /testdb/_search
 }
 ```
 
-![image-20200802230938107](https://gitee.com/BadKid90s/imageshack/blob/other/image-20200802230938107.png)
+![image-20200802230938107](images/image-20200802230938107.png)
 
 
 #### 高亮查询
@@ -621,7 +621,7 @@ GET /wry/_search
 
 高亮关键字被加了`<em></em>` 标签
 
-![image-20200802231054144](https://gitee.com/BadKid90s/imageshack/blob/other/image-20200802231054144.png)
+![image-20200802231054144](images/image-20200802231054144.png)
 
 如果我们不想使用默认的，我们可以自己定义标签
 
@@ -643,6 +643,6 @@ GET /wry/_search
 }
 ```
 
-![image-20200802231110593](https://gitee.com/BadKid90s/imageshack/blob/other/image-20200802231110593.png)
+![image-20200802231110593](images/image-20200802231110593.png)
 
 # 
