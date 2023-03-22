@@ -73,7 +73,7 @@ module.exports = {
         "searchMaxSuggestions": 10,
         "lastUpdated": "Last Updated",
         "author": "wangruiyu",
-        "authorAvatar": "/avatar.png",
+        "authorAvatar": "https://avatars.githubusercontent.com/u/44721378?v=4",
         "record": "xxxx",
         "startYear": "2021",
         "subSidebar": "auto"//在所有页面中启用自动生成子侧边栏，原 sidebar 仍然兼容
