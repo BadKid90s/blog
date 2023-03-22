@@ -18,5 +18,12 @@ module.exports = {
         "02",
         "03",
         "04",
+    ],
+    "/docs/docker/": [
+        "",
+        "docker",
+        "dockerfile",
+        "docker-springboot",
+        "docker-springboot-config",
     ]
 }
