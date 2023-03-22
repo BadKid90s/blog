@@ -5,4 +5,4 @@ cd dist
 call git init
 call git add -A
 call git commit -m 'deploy'
-call git push -f git@github.com:Post-90sBadKid/blog.git master:main
+call git push -f https://github.com/BadKid90s/blog.git main:main
