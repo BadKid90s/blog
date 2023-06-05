@@ -14,7 +14,7 @@ categories:
 
 ## 解决方案
 其实只需要配置Jackson支持kotlin的序列化就可以了，并且jackson提供了kotlin-module依赖
-### 依赖
+## 依赖
 [jackson-module-kotlin](https://mvnrepository.com/artifact/com.fasterxml.jackson.module/jackson-module-kotlin)
 #### gradle(kotlin)
 ```kotlin

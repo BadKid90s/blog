@@ -85,8 +85,26 @@ implementation group: 'com.fasterxml.jackson.datatype', name: 'jackson-datatype-
     <version>last-version</version>
 </dependency>
 ```
+### java
+```java
+@Configuration
+public class AppConfig {
+    
+    @Bean
+    public MappingJackson2HttpMessageConverter customJackson2HttpMessageConverter() {
+        MappingJackson2HttpMessageConverter jsonConverter = new MappingJackson2HttpMessageConverter();
+        ObjectMapper objectMapper = ObjectMapper();
 
-## 配置
+        //注册JavaTimeModule，解决无法序列化时间到LocalDate、LocalDateTime类型
+        objectMapper.registerModule(new JavaTimeModule());
+      
+        jsonConverter.objectMapper = objectMapper;
+        return jsonConverter;
+    }
+}
+```
+
+### kotlin
 ```kotlin
 @Configuration
 class AppConfig {
@@ -104,6 +122,7 @@ class AppConfig {
     }
 }
 ```
+
 
 
 
