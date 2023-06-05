@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>SpringBoot整合 | BadKid90s的个人博客</title>
+    <meta name="generator" content="VuePress 1.8.2">
+    <link rel="icon" href="https://avatars.githubusercontent.com/u/44721378?s=64&amp;v=4">
+    <script language="javascript" type="text/javascript" src="https://cdn.bootcdn.net/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script language="javascript" type="text/javascript" src="/blog/js/MouseClickEffect.js"></script>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+    
+    <link rel="preload" href="/blog/assets/css/0.styles.2059898c.css" as="style"><link rel="preload" href="/blog/assets/js/app.90949fa6.js" as="script"><link rel="preload" href="/blog/assets/js/6.046367ea.js" as="script"><link rel="preload" href="/blog/assets/js/1.cdc513ed.js" as="script"><link rel="preload" href="/blog/assets/js/8.77a36604.js" as="script"><link rel="prefetch" href="/blog/assets/js/10.74c9e7f1.js"><link rel="prefetch" href="/blog/assets/js/11.886e0201.js"><link rel="prefetch" href="/blog/assets/js/12.ca758726.js"><link rel="prefetch" href="/blog/assets/js/13.5f599ef3.js"><link rel="prefetch" href="/blog/assets/js/14.3187c372.js"><link rel="prefetch" href="/blog/assets/js/15.e713d0c2.js"><link rel="prefetch" href="/blog/assets/js/16.c8e95ed3.js"><link rel="prefetch" href="/blog/assets/js/17.bc3349f8.js"><link rel="prefetch" href="/blog/assets/js/18.5fc327e9.js"><link rel="prefetch" href="/blog/assets/js/19.73a5c6d8.js"><link rel="prefetch" href="/blog/assets/js/20.d4ee2619.js"><link rel="prefetch" href="/blog/assets/js/21.b6d1e7f6.js"><link rel="prefetch" href="/blog/assets/js/22.f5cb648e.js"><link rel="prefetch" href="/blog/assets/js/23.007afb6f.js"><link rel="prefetch" href="/blog/assets/js/24.9e354a03.js"><link rel="prefetch" href="/blog/assets/js/25.e39f0284.js"><link rel="prefetch" href="/blog/assets/js/26.11ce0db9.js"><link rel="prefetch" href="/blog/assets/js/27.286eaa2e.js"><link rel="prefetch" href="/blog/assets/js/28.d8eee8c3.js"><link rel="prefetch" href="/blog/assets/js/29.09b215c5.js"><link rel="prefetch" href="/blog/assets/js/3.1cdd0199.js"><link rel="prefetch" href="/blog/assets/js/30.dd26abf5.js"><link rel="prefetch" href="/blog/assets/js/31.6d127640.js"><link rel="prefetch" href="/blog/assets/js/32.1cf73fc4.js"><link rel="prefetch" href="/blog/assets/js/33.3169d124.js"><link rel="prefetch" href="/blog/assets/js/34.ad49a374.js"><link rel="prefetch" href="/blog/assets/js/35.2c9f22c1.js"><link rel="prefetch" href="/blog/assets/js/36.b2d6c7a5.js"><link rel="prefetch" href="/blog/assets/js/37.ffd8244e.js"><link rel="prefetch" href="/blog/assets/js/38.5ff57850.js"><link rel="prefetch" href="/blog/assets/js/39.be22f7dc.js"><link rel="prefetch" href="/blog/assets/js/4.e59eeb46.js"><link rel="prefetch" href="/blog/assets/js/40.3dd45f3d.js"><link rel="prefetch" href="/blog/assets/js/5.a44d2cd5.js"><link rel="prefetch" href="/blog/assets/js/7.f8aa44ea.js"><link rel="prefetch" href="/blog/assets/js/9.20aa6505.js">
+    <link rel="stylesheet" href="/blog/assets/css/0.styles.2059898c.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container" data-v-1156296a><div data-v-1156296a><div id="loader-wrapper" class="loading-wrapper" data-v-d48f4d20 data-v-1156296a data-v-1156296a><div class="loader-main" data-v-d48f4d20><div data-v-d48f4d20></div><div data-v-d48f4d20></div><div data-v-d48f4d20></div><div data-v-d48f4d20></div></div> <!----> <!----></div> <div class="password-shadow password-wrapper-out" style="display:none;" data-v-4e82dffc data-v-1156296a data-v-1156296a><h3 class="title" data-v-4e82dffc data-v-4e82dffc>BadKid90s的个人博客</h3> <p class="description" data-v-4e82dffc data-v-4e82dffc></p> <label id="box" class="inputBox" data-v-4e82dffc data-v-4e82dffc><input type="password" value="" data-v-4e82dffc> <span data-v-4e82dffc>Konck! Knock!</span> <button data-v-4e82dffc>OK</button></label> <div class="footer" data-v-4e82dffc data-v-4e82dffc><span data-v-4e82dffc><i class="iconfont reco-theme" data-v-4e82dffc></i> <a target="blank" href="https://vuepress-theme-reco.recoluan.com" data-v-4e82dffc>vuePress-theme-reco</a></span> <span data-v-4e82dffc><i class="iconfont reco-copyright" data-v-4e82dffc></i> <a data-v-4e82dffc><span data-v-4e82dffc>wangruiyu</span>
+            
+          <span data-v-4e82dffc>2021 - </span>
+          2023
+        </a></span></div></div> <div class="hide" data-v-1156296a><header class="navbar" data-v-1156296a><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/blog/" class="home-link router-link-active"><img src="/blog/logo.png" alt="BadKid90s的个人博客" class="logo"> <span class="site-name">BadKid90s的个人博客</span></a> <div class="links"><div class="color-picker"><a class="color-button"><i class="iconfont reco-color"></i></a> <div class="color-picker-menu" style="display:none;"><div class="mode-options"><h4 class="title">Choose mode</h4> <ul class="color-mode-options"><li class="dark">dark</li><li class="auto active">auto</li><li class="light">light</li></ul></div></div></div> <div class="search-box"><i class="iconfont reco-search"></i> <input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/blog/" class="nav-link"><i class="iconfont reco-home"></i>
+  随意一点的主页
+</a></div><div class="nav-item"><a href="/blog/timeline/" class="nav-link"><i class="iconfont reco-date"></i>
+  莫名其妙的时间轴
+</a></div><div class="nav-item"><a href="/blog/tag/" class="nav-link"><i class="iconfont reco-tag"></i>
+  小标签
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-category"></i>
+      大分类
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/categories/HTTP/" class="nav-link"><i class="undefined"></i>
+  HTTP
+</a></li><li class="dropdown-item"><!----> <a href="/blog/categories/SpringBoot/" class="nav-link"><i class="undefined"></i>
+  SpringBoot
+</a></li><li class="dropdown-item"><!----> <a href="/blog/categories/Docker/" class="nav-link"><i class="undefined"></i>
+  Docker
+</a></li><li class="dropdown-item"><!----> <a href="/blog/categories/JAVA/" class="nav-link"><i class="undefined"></i>
+  JAVA
+</a></li><li class="dropdown-item"><!----> <a href="/blog/categories/ElasticSearch/" class="nav-link"><i class="undefined"></i>
+  ElasticSearch
+</a></li><li class="dropdown-item"><!----> <a href="/blog/categories/Hadoop/" class="nav-link"><i class="undefined"></i>
+  Hadoop
+</a></li><li class="dropdown-item"><!----> <a href="/blog/categories/Netty/" class="nav-link"><i class="undefined"></i>
+  Netty
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-message"></i>
+      很厉害的文章
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/docs/netty/" class="nav-link"><i class="undefined"></i>
+  Netty
+</a></li><li class="dropdown-item"><!----> <a href="/blog/docs/es/" class="nav-link router-link-active"><i class="undefined"></i>
+  ElasticSearch
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-message"></i>
+      联系我吧
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="https://github.com/BadKid90s" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="iconfont reco-github"></i>
+  GitHub
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul></div></div> <!----></nav></div></header> <div class="sidebar-mask" data-v-1156296a></div> <aside class="sidebar" data-v-1156296a><div class="personal-info-wrapper" data-v-828910c6 data-v-1156296a><img src="https://avatars.githubusercontent.com/u/44721378?v=4" alt="author-avatar" class="personal-img" data-v-828910c6> <h3 class="name" data-v-828910c6>
+    wangruiyu
+  </h3> <div class="num" data-v-828910c6><div data-v-828910c6><h3 data-v-828910c6>29</h3> <h6 data-v-828910c6>文章</h6></div> <div data-v-828910c6><h3 data-v-828910c6>8</h3> <h6 data-v-828910c6>标签</h6></div></div> <ul class="social-links" data-v-828910c6></ul> <hr data-v-828910c6></div> <nav class="nav-links"><div class="nav-item"><a href="/blog/" class="nav-link"><i class="iconfont reco-home"></i>
+  随意一点的主页
+</a></div><div class="nav-item"><a href="/blog/timeline/" class="nav-link"><i class="iconfont reco-date"></i>
+  莫名其妙的时间轴
+</a></div><div class="nav-item"><a href="/blog/tag/" class="nav-link"><i class="iconfont reco-tag"></i>
+  小标签
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-category"></i>
+      大分类
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/categories/HTTP/" class="nav-link"><i class="undefined"></i>
+  HTTP
+</a></li><li class="dropdown-item"><!----> <a href="/blog/categories/SpringBoot/" class="nav-link"><i class="undefined"></i>
+  SpringBoot
+</a></li><li class="dropdown-item"><!----> <a href="/blog/categories/Docker/" class="nav-link"><i class="undefined"></i>
+  Docker
+</a></li><li class="dropdown-item"><!----> <a href="/blog/categories/JAVA/" class="nav-link"><i class="undefined"></i>
+  JAVA
+</a></li><li class="dropdown-item"><!----> <a href="/blog/categories/ElasticSearch/" class="nav-link"><i class="undefined"></i>
+  ElasticSearch
+</a></li><li class="dropdown-item"><!----> <a href="/blog/categories/Hadoop/" class="nav-link"><i class="undefined"></i>
+  Hadoop
+</a></li><li class="dropdown-item"><!----> <a href="/blog/categories/Netty/" class="nav-link"><i class="undefined"></i>
+  Netty
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-message"></i>
+      很厉害的文章
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/docs/netty/" class="nav-link"><i class="undefined"></i>
+  Netty
+</a></li><li class="dropdown-item"><!----> <a href="/blog/docs/es/" class="nav-link router-link-active"><i class="undefined"></i>
+  ElasticSearch
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-message"></i>
+      联系我吧
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="https://github.com/BadKid90s" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="iconfont reco-github"></i>
+  GitHub
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul></div></div> <!----></nav> <ul class="sidebar-links"><li><a href="/blog/docs/es/ElasticSearchStudy01.html" class="sidebar-link">基本数据类型</a></li><li><a href="/blog/docs/es/ElasticSearchStudy02.html" class="sidebar-link">索引的基本操作</a></li><li><a href="/blog/docs/es/ElasticSearchStudy03.html" class="sidebar-link">文档的操作</a></li><li><a href="/blog/docs/es/ElasticSearchStudy04.html" aria-current="page" class="active sidebar-link">SpringBoot整合</a></li></ul> </aside> <div class="password-shadow password-wrapper-in" style="display:none;" data-v-4e82dffc data-v-1156296a><h3 class="title" data-v-4e82dffc data-v-4e82dffc>SpringBoot整合</h3> <!----> <label id="box" class="inputBox" data-v-4e82dffc data-v-4e82dffc><input type="password" value="" data-v-4e82dffc> <span data-v-4e82dffc>Konck! Knock!</span> <button data-v-4e82dffc>OK</button></label> <div class="footer" data-v-4e82dffc data-v-4e82dffc><span data-v-4e82dffc><i class="iconfont reco-theme" data-v-4e82dffc></i> <a target="blank" href="https://vuepress-theme-reco.recoluan.com" data-v-4e82dffc>vuePress-theme-reco</a></span> <span data-v-4e82dffc><i class="iconfont reco-copyright" data-v-4e82dffc></i> <a data-v-4e82dffc><span data-v-4e82dffc>wangruiyu</span>
+            
+          <span data-v-4e82dffc>2021 - </span>
+          2023
+        </a></span></div></div> <div data-v-1156296a><main class="page"><section><div class="page-title"><h1 class="title">SpringBoot整合</h1> <div data-v-1ff7123e><i class="iconfont reco-account" data-v-1ff7123e><span data-v-1ff7123e>wangruiyu</span></i> <i class="iconfont reco-date" data-v-1ff7123e><span data-v-1ff7123e>2020/12/4</span></i> <!----> <i class="tags iconfont reco-tag" data-v-1ff7123e><span class="tag-item" data-v-1ff7123e>ElasticSearch</span></i></div></div> <div class="theme-reco-content content__default"><h1 id="集成springboot"><a href="#集成springboot" class="header-anchor">#</a> 集成SpringBoot</h1> <h2 id="找文档"><a href="#找文档" class="header-anchor">#</a> 找文档</h2> <p><a href="https://www.elastic.co/guide/index.html" target="_blank" rel="noopener noreferrer">官网地址<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a>：https://www.elastic.co/guide/index.html<br> <a href="https://www.elastic.co/guide/en/elasticsearch/client/index.html" target="_blank" rel="noopener noreferrer">客户端集成<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a>https://www.elastic.co/guide/en/elasticsearch/client/index.html</p> <p>一般我们使用高级API</p> <p><img src="/blog/assets/img/image-20200802231215650.85694065.png" alt="image-20200802231215650"></p> <div class="language-xml line-numbers-mode"><pre class="language-xml"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>dependency</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>groupId</span><span class="token punctuation">&gt;</span></span>org.elasticsearch.client<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>groupId</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>artifactId</span><span class="token punctuation">&gt;</span></span>elasticsearch-rest-high-level-client<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>artifactId</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>version</span><span class="token punctuation">&gt;</span></span>7.8.1<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>version</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>dependency</span><span class="token punctuation">&gt;</span></span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br></div></div><h2 id="找对象"><a href="#找对象" class="header-anchor">#</a> 找对象</h2> <p><img src="/blog/assets/img/image-20200802231348859.24f320d1.png" alt="image-20200802231348859"></p> <h2 id="搭建项目"><a href="#搭建项目" class="header-anchor">#</a> 搭建项目</h2> <h3 id="pom"><a href="#pom" class="header-anchor">#</a> pom</h3> <div class="language-xml line-numbers-mode"><pre class="language-xml"><code><span class="token prolog">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;</span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>project</span> <span class="token attr-name">xmlns</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>http://maven.apache.org/POM/4.0.0<span class="token punctuation">&quot;</span></span> <span class="token attr-name"><span class="token namespace">xmlns:</span>xsi</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>http://www.w3.org/2001/XMLSchema-instance<span class="token punctuation">&quot;</span></span>
+	<span class="token attr-name"><span class="token namespace">xsi:</span>schemaLocation</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+	<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>modelVersion</span><span class="token punctuation">&gt;</span></span>4.0.0<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>modelVersion</span><span class="token punctuation">&gt;</span></span>
+	<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>parent</span><span class="token punctuation">&gt;</span></span>
+		<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>groupId</span><span class="token punctuation">&gt;</span></span>org.springframework.boot<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>groupId</span><span class="token punctuation">&gt;</span></span>
+		<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>artifactId</span><span class="token punctuation">&gt;</span></span>spring-boot-starter-parent<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>artifactId</span><span class="token punctuation">&gt;</span></span>
+		<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>version</span><span class="token punctuation">&gt;</span></span>2.3.2.RELEASE<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>version</span><span class="token punctuation">&gt;</span></span>
+		<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>relativePath</span><span class="token punctuation">/&gt;</span></span> <span class="token comment">&lt;!-- lookup parent from repository --&gt;</span>
+	<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>parent</span><span class="token punctuation">&gt;</span></span>
+	<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>groupId</span><span class="token punctuation">&gt;</span></span>com.wry<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>groupId</span><span class="token punctuation">&gt;</span></span>
+	<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>artifactId</span><span class="token punctuation">&gt;</span></span>es-api<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>artifactId</span><span class="token punctuation">&gt;</span></span>
+	<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>version</span><span class="token punctuation">&gt;</span></span>0.0.1-SNAPSHOT<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>version</span><span class="token punctuation">&gt;</span></span>
+	<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>name</span><span class="token punctuation">&gt;</span></span>es-api<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>name</span><span class="token punctuation">&gt;</span></span>
+	<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>description</span><span class="token punctuation">&gt;</span></span>Spring Boot for ElasticSearch<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>description</span><span class="token punctuation">&gt;</span></span>
+
+	<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>dependencies</span><span class="token punctuation">&gt;</span></span>
+		<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>dependency</span><span class="token punctuation">&gt;</span></span>
+			<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>groupId</span><span class="token punctuation">&gt;</span></span>org.springframework.boot<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>groupId</span><span class="token punctuation">&gt;</span></span>
+			<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>artifactId</span><span class="token punctuation">&gt;</span></span>spring-boot-starter-data-elasticsearch<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>artifactId</span><span class="token punctuation">&gt;</span></span>
+		<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>dependency</span><span class="token punctuation">&gt;</span></span>
+		<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>dependency</span><span class="token punctuation">&gt;</span></span>
+			<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>groupId</span><span class="token punctuation">&gt;</span></span>org.springframework.boot<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>groupId</span><span class="token punctuation">&gt;</span></span>
+			<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>artifactId</span><span class="token punctuation">&gt;</span></span>spring-boot-starter-web<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>artifactId</span><span class="token punctuation">&gt;</span></span>
+		<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>dependency</span><span class="token punctuation">&gt;</span></span>
+
+		<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>dependency</span><span class="token punctuation">&gt;</span></span>
+			<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>groupId</span><span class="token punctuation">&gt;</span></span>org.springframework.boot<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>groupId</span><span class="token punctuation">&gt;</span></span>
+			<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>artifactId</span><span class="token punctuation">&gt;</span></span>spring-boot-devtools<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>artifactId</span><span class="token punctuation">&gt;</span></span>
+			<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>scope</span><span class="token punctuation">&gt;</span></span>runtime<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>scope</span><span class="token punctuation">&gt;</span></span>
+			<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>optional</span><span class="token punctuation">&gt;</span></span>true<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>optional</span><span class="token punctuation">&gt;</span></span>
+		<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>dependency</span><span class="token punctuation">&gt;</span></span>
+		<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>dependency</span><span class="token punctuation">&gt;</span></span>
+			<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>groupId</span><span class="token punctuation">&gt;</span></span>org.springframework.boot<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>groupId</span><span class="token punctuation">&gt;</span></span>
+			<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>artifactId</span><span class="token punctuation">&gt;</span></span>spring-boot-configuration-processor<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>artifactId</span><span class="token punctuation">&gt;</span></span>
+			<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>optional</span><span class="token punctuation">&gt;</span></span>true<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>optional</span><span class="token punctuation">&gt;</span></span>
+		<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>dependency</span><span class="token punctuation">&gt;</span></span>
+		<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>dependency</span><span class="token punctuation">&gt;</span></span>
+			<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>groupId</span><span class="token punctuation">&gt;</span></span>org.projectlombok<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>groupId</span><span class="token punctuation">&gt;</span></span>
+			<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>artifactId</span><span class="token punctuation">&gt;</span></span>lombok<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>artifactId</span><span class="token punctuation">&gt;</span></span>
+			<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>optional</span><span class="token punctuation">&gt;</span></span>true<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>optional</span><span class="token punctuation">&gt;</span></span>
+		<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>dependency</span><span class="token punctuation">&gt;</span></span>
+		<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>dependency</span><span class="token punctuation">&gt;</span></span>
+			<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>groupId</span><span class="token punctuation">&gt;</span></span>org.springframework.boot<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>groupId</span><span class="token punctuation">&gt;</span></span>
+			<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>artifactId</span><span class="token punctuation">&gt;</span></span>spring-boot-starter-test<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>artifactId</span><span class="token punctuation">&gt;</span></span>
+			<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>scope</span><span class="token punctuation">&gt;</span></span>test<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>scope</span><span class="token punctuation">&gt;</span></span>
+			<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>exclusions</span><span class="token punctuation">&gt;</span></span>
+				<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>exclusion</span><span class="token punctuation">&gt;</span></span>
+					<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>groupId</span><span class="token punctuation">&gt;</span></span>org.junit.vintage<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>groupId</span><span class="token punctuation">&gt;</span></span>
+					<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>artifactId</span><span class="token punctuation">&gt;</span></span>junit-vintage-engine<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>artifactId</span><span class="token punctuation">&gt;</span></span>
+				<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>exclusion</span><span class="token punctuation">&gt;</span></span>
+			<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>exclusions</span><span class="token punctuation">&gt;</span></span>
+		<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>dependency</span><span class="token punctuation">&gt;</span></span>
+	<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>dependencies</span><span class="token punctuation">&gt;</span></span>
+
+	<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>build</span><span class="token punctuation">&gt;</span></span>
+		<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>plugins</span><span class="token punctuation">&gt;</span></span>
+			<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>plugin</span><span class="token punctuation">&gt;</span></span>
+				<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>groupId</span><span class="token punctuation">&gt;</span></span>org.springframework.boot<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>groupId</span><span class="token punctuation">&gt;</span></span>
+				<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>artifactId</span><span class="token punctuation">&gt;</span></span>spring-boot-maven-plugin<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>artifactId</span><span class="token punctuation">&gt;</span></span>
+			<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>plugin</span><span class="token punctuation">&gt;</span></span>
+		<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>plugins</span><span class="token punctuation">&gt;</span></span>
+	<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>build</span><span class="token punctuation">&gt;</span></span>
+
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>project</span><span class="token punctuation">&gt;</span></span>
+
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br><span class="line-number">37</span><br><span class="line-number">38</span><br><span class="line-number">39</span><br><span class="line-number">40</span><br><span class="line-number">41</span><br><span class="line-number">42</span><br><span class="line-number">43</span><br><span class="line-number">44</span><br><span class="line-number">45</span><br><span class="line-number">46</span><br><span class="line-number">47</span><br><span class="line-number">48</span><br><span class="line-number">49</span><br><span class="line-number">50</span><br><span class="line-number">51</span><br><span class="line-number">52</span><br><span class="line-number">53</span><br><span class="line-number">54</span><br><span class="line-number">55</span><br><span class="line-number">56</span><br><span class="line-number">57</span><br><span class="line-number">58</span><br><span class="line-number">59</span><br><span class="line-number">60</span><br><span class="line-number">61</span><br><span class="line-number">62</span><br><span class="line-number">63</span><br><span class="line-number">64</span><br><span class="line-number">65</span><br><span class="line-number">66</span><br></div></div><p>SpringBoot默认使用7.6.2,与本地版本不一致会连接不成功。
+<img src="/blog/assets/img/image-20200802231523942.9ffa1b9e.png" alt="image-20200802231523942"></p> <h3 id="自定义es-版本依赖-与本地版本保持一直"><a href="#自定义es-版本依赖-与本地版本保持一直" class="header-anchor">#</a> 自定义es 版本依赖，与本地版本保持一直</h3> <div class="language-xml line-numbers-mode"><pre class="language-xml"><code>	<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>properties</span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>java.version</span><span class="token punctuation">&gt;</span></span>1.8<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>java.version</span><span class="token punctuation">&gt;</span></span>
+		<span class="token comment">&lt;!--自定义es 版本依赖，与本地版本保持一直 --&gt;</span>
+		<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>elasticsearch.version</span><span class="token punctuation">&gt;</span></span>7.8.1<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>elasticsearch.version</span><span class="token punctuation">&gt;</span></span>
+	<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>properties</span><span class="token punctuation">&gt;</span></span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br></div></div><p><img src="/blog/assets/img/image-20200802231614736.760ce233.png" alt="image-20200802231614736"></p> <h3 id=""><a href="#" class="header-anchor">#</a></h3> <h3 id="自动配置"><a href="#自动配置" class="header-anchor">#</a> 自动配置</h3> <p><img src="/blog/assets/img/image-20200802231807542.a5f43515.png" alt="image-20200802231807542"></p> <h3 id="application-yml"><a href="#application-yml" class="header-anchor">#</a> application.yml</h3> <div class="language-yaml line-numbers-mode"><pre class="language-yaml"><code><span class="token key atrule">server</span><span class="token punctuation">:</span>
+  <span class="token key atrule">port</span><span class="token punctuation">:</span> <span class="token number">9000</span>
+
+<span class="token key atrule">spring</span><span class="token punctuation">:</span>
+  <span class="token key atrule">elasticsearch</span><span class="token punctuation">:</span>
+    <span class="token key atrule">rest</span><span class="token punctuation">:</span>
+      <span class="token key atrule">uris</span><span class="token punctuation">:</span> http<span class="token punctuation">:</span>//localhost<span class="token punctuation">:</span><span class="token number">9200</span>
+
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br></div></div><h2 id="索引-api-操作"><a href="#索引-api-操作" class="header-anchor">#</a> 索引 API 操作</h2> <p>注入<code>ElasticSearch</code>的客户端对象<code>RestHighLevelClient</code></p> <div class="language- line-numbers-mode"><pre class="language-text"><code>package com.wry.esapi;
+
+import org.elasticsearch.client.IndicesClient;
+import org.elasticsearch.client.RequestOptions;
+import org.elasticsearch.client.RestHighLevelClient;
+import org.elasticsearch.client.indices.CreateIndexRequest;
+import org.elasticsearch.client.indices.CreateIndexResponse;
+import org.junit.jupiter.api.Test;
+import org.springframework.boot.test.context.SpringBootTest;
+
+import x.annotation.Resource;
+import .io.IOException;
+
+@SpringBootTest
+class EsApiApplicationTests {
+    
+    private final String INDEX_NAME=&quot;spring_boot_index&quot;;
+
+    @Resource
+    private RestHighLevelClient restHighLevelClient;
+    
+}
+
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br></div></div><h3 id="创建索引"><a href="#创建索引" class="header-anchor">#</a> 创建索引</h3> <div class="language- line-numbers-mode"><pre class="language-text"><code>    /**
+     * 创建索引
+     *
+     * @throws IOException
+     */
+    @Test
+    void testCreateIndexRequest() throws IOException {
+        //创建索引请求
+        CreateIndexRequest request = new CreateIndexRequest(INDEX_NAME);
+        //执行请求并获取响应结果
+        IndicesClient indices = restHighLevelClient.indices();
+        CreateIndexResponse response = indices.create(request, RequestOptions.DEFAULT);
+        System.out.println(response.index());
+    }
+    
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br></div></div><p><img src="/blog/assets/img/image-20200802232058865.987f7652.png" alt="image-20200802232058865"></p> <p><img src="/blog/assets/img/image-20200802232120173.7f5a84bf.png" alt="image-20200802232120173"></p> <h3 id="判断索引是否存在"><a href="#判断索引是否存在" class="header-anchor">#</a> 判断索引是否存在</h3> <div class="language- line-numbers-mode"><pre class="language-text"><code>    /**
+     * 判断索引是否存在
+     *
+     * @throws IOException
+     */
+    @Test
+    void testExistsIndexRequest() throws IOException {
+        //创建索引请求
+        GetIndexRequest request = new GetIndexRequest(INDEX_NAME);
+        //执行请求并获取响应结果
+        boolean exists = restHighLevelClient.indices().exists(request, RequestOptions.DEFAULT);
+
+        System.out.println(exists);
+    }
+    
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br></div></div><p><img src="/blog/assets/img/image-20200802232203179.09ce83cb.png" alt="image-20200802232203179"></p> <h3 id="删除索引"><a href="#删除索引" class="header-anchor">#</a> 删除索引</h3> <div class="language- line-numbers-mode"><pre class="language-text"><code>    /**
+     * 删除索引
+     *
+     * @throws IOException
+     */
+    @Test
+    void testDeleteIndexRequest() throws IOException {
+        //创建索引请求
+        DeleteIndexRequest request = new DeleteIndexRequest(INDEX_NAME);
+        //执行请求并获取响应结果
+        AcknowledgedResponse response = restHighLevelClient.indices().delete(request, RequestOptions.DEFAULT);
+
+        System.out.println(response.isAcknowledged());
+    }
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br></div></div><p><img src="/blog/assets/img/image-20200802232231687.3030869c.png" alt="image-20200802232231687"></p> <p><img src="/blog/assets/img/image-20200802232525542.c9a737c9.png" alt="image-20200802232525542"></p> <h2 id="文档-api-操作"><a href="#文档-api-操作" class="header-anchor">#</a> 文档 API 操作</h2> <div class="language- line-numbers-mode"><pre class="language-text"><code>package com.wry.esapi.pojo;
+
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+import org.springframework.stereotype.Component;
+
+/**
+ * &lt;p&gt;
+ * 创建一个User 对应提供全参，无参构造器
+ * &lt;/p&gt;
+ *
+ * @author wangruiyu
+ * @since 2020/8/1
+ */
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
+@Component
+public class User {
+    
+    private String name;
+    private Integer age;
+}
+
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br></div></div><h3 id="创建文档"><a href="#创建文档" class="header-anchor">#</a> 创建文档</h3> <div class="language- line-numbers-mode"><pre class="language-text"><code> 	/**
+     * 创建文档
+     *
+     * @throws IOException
+     */    
+	@Test
+    void testAddDocumentRequest() throws IOException {
+        //创建对象
+        User user = new User(&quot;张三&quot;, 24);
+        //创建文档请求
+        IndexRequest indexRequest = new IndexRequest(INDEX_NAME);
+        // PUT /spring_boot_index/_doc/1
+        indexRequest.id(&quot;1&quot;);
+        indexRequest.timeout(TimeValue.timeValueSeconds(1));
+
+        //将对象转换为
+        ObjectMapper mapper=new ObjectMapper();
+        indexRequest.source(mapper.writeValueAsString(user), XContentType.);
+        //执行请求并获取响应结果
+        IndexResponse response = restHighLevelClient.index(indexRequest, RequestOptions.DEFAULT);
+        System.out.println(response.toString());
+
+    }
+
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br></div></div><p><img src="/blog/assets/img/image-20200802232349921.9d9d0753.png" alt="image-20200802232349921"></p> <p><img src="/blog/assets/img/image-20200802232653106.15ac200a.png" alt="image-20200802232653106"></p> <h3 id="判断文档是否存在"><a href="#判断文档是否存在" class="header-anchor">#</a> 判断文档是否存在</h3> <div class="language- line-numbers-mode"><pre class="language-text"><code>    /**
+     * 判断文档是否存在
+     *
+     * @throws IOException
+     */
+    @Test
+    void testExistsDocumentRequest() throws IOException {
+        //创建文档请求
+        //GET /spring_boot_index/_doc/1
+        GetRequest getRequest = new GetRequest(INDEX_NAME, &quot;1&quot;);
+        //不获取返回的_source 的上下文
+        getRequest.fetchSourceContext(new FetchSourceContext(false));
+        //执行请求并获取响应结果
+        GetResponse response = restHighLevelClient.get(getRequest, RequestOptions.DEFAULT);
+        System.out.println(response.toString());
+
+    }  
+
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br></div></div><p><img src="/blog/assets/img/image-20200802232752850.05a9bd8f.png" alt="image-20200802232752850"></p> <h3 id="查询文档内容"><a href="#查询文档内容" class="header-anchor">#</a> 查询文档内容</h3> <div class="language- line-numbers-mode"><pre class="language-text"><code>    /**
+     * 查询文档内容
+     *
+     * @throws IOException
+     */
+    @Test
+    void testGetDocumentRequest() throws IOException {
+        //创建文档请求
+        //GET /spring_boot_index/_doc/1
+        GetRequest getRequest = new GetRequest(INDEX_NAME, &quot;1&quot;);
+        //执行请求并获取响应结果
+        GetResponse response = restHighLevelClient.get(getRequest, RequestOptions.DEFAULT);
+        System.out.println(response.getSourceAsString());
+        System.out.println(response.toString());
+
+    }
+
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br></div></div><p><img src="/blog/assets/img/image-20200802232856318.6b1cb3d3.png" alt="image-20200802232856318"></p> <h3 id="更新文档"><a href="#更新文档" class="header-anchor">#</a> 更新文档</h3> <div class="language- line-numbers-mode"><pre class="language-text"><code>    /**
+     * 更新文档内容
+     *
+     * @throws IOException
+     */
+    @Test
+    void testUpdateDocumentRequest() throws IOException {
+        //创建文档请求
+        //POST /wry/_doc/1/_update
+        UpdateRequest updateRequest = new UpdateRequest(INDEX_NAME, &quot;1&quot;);
+        updateRequest.timeout(TimeValue.timeValueSeconds(1));
+        //创建对象
+        User user=new User(&quot;张三&quot;,124);
+        //将对象转换为
+        ObjectMapper mapper = new ObjectMapper();
+        updateRequest.doc(mapper.writeValueAsString(user), XContentType.);
+        //执行请求并获取响应结果
+        UpdateResponse response = restHighLevelClient.update(updateRequest, RequestOptions.DEFAULT);
+        System.out.println(response.status());
+        System.out.println(response.toString());
+
+    }
+
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br></div></div><p><img src="/blog/assets/img/image-20200802233004057.a19baee4.png" alt="image-20200802233004057"></p> <h3 id="删除文档"><a href="#删除文档" class="header-anchor">#</a> 删除文档</h3> <div class="language- line-numbers-mode"><pre class="language-text"><code>    /**
+     * 删除文档内容
+     *
+     * @throws IOException
+     */
+    @Test
+    void testDeleteDocumentRequest() throws IOException {
+        //创建文档请求
+        DeleteRequest deleteRequest = new DeleteRequest(INDEX_NAME, &quot;1&quot;);
+        deleteRequest.timeout(TimeValue.timeValueSeconds(1));
+        //执行请求并获取响应结果
+        DeleteResponse response = restHighLevelClient.delete(deleteRequest, RequestOptions.DEFAULT);
+        System.out.println(response.status());
+        System.out.println(response.toString());
+
+    }
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br></div></div><p><img src="/blog/assets/img/image-20200802233030746.15fa4670.png" alt="image-20200802233030746"></p> <h3 id="批量操作文档内容"><a href="#批量操作文档内容" class="header-anchor">#</a> 批量操作文档内容</h3> <div class="language- line-numbers-mode"><pre class="language-text"><code>   /**
+     * 批量操作文档内容
+     *
+     * @throws IOException
+     */
+    @Test
+    void testBulkDocumentRequest() throws IOException {
+        List&lt;User&gt; list = new ArrayList&lt;&gt;();
+        for (int i = 0; i &lt; 10; i++) {
+            list.add(new User(&quot;z&quot; + i, i + 10));
+        }
+        BulkRequest bulkRequest = new BulkRequest();
+        bulkRequest.timeout(TimeValue.timeValueSeconds(10));
+
+        //将对象转换为
+        ObjectMapper mapper = new ObjectMapper();
+        for (int i = 0; i &lt; list.size(); i++) {
+            IndexRequest indexRequest = new IndexRequest(INDEX_NAME)
+                    .id(String.valueOf(i+1))
+                    .source(mapper.writeValueAsString(list.get(i)),XContentType.);
+            bulkRequest.add(indexRequest);
+        }
+        //执行请求并获取响应结果
+        BulkResponse response = restHighLevelClient.bulk(bulkRequest, RequestOptions.DEFAULT);
+        //是否失败 false 成功， true 失败
+        System.out.println(response.hasFailures());
+    }
+    
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br></div></div><p><img src="/blog/assets/img/image-20200802233054885.e1556880.png" alt=""></p> <p><img src="/blog/assets/img/image-20200802233116205.50b56b51.png" alt=""> <img src="/blog/assets/img/image-20200802233116205.50b56b51.png" alt=""></p> <h3 id="查询文档"><a href="#查询文档" class="header-anchor">#</a> 查询文档</h3> <div class="language- line-numbers-mode"><pre class="language-text"><code>    /**
+     * 查询文档内容
+     *
+     * @throws IOException
+     */
+    @Test
+    void testSearchDocumentRequest() throws IOException {
+        SearchRequest searchRequest = new SearchRequest(INDEX_NAME);
+        //构建搜索条件
+        SearchSourceBuilder sourceBuilder = new SearchSourceBuilder();
+        //查询条件，通过 QueryBuilders 工具类实现
+        //termQuery 精确匹配
+        //matchAllQuery 匹配所有
+        QueryBuilders.termQuery(&quot;name&quot;,&quot;z10&quot;);
+        sourceBuilder.query();
+        sourceBuilder.timeout(TimeValue.timeValueSeconds(10));
+
+        SearchResponse response = restHighLevelClient.search(searchRequest, RequestOptions.DEFAULT);
+        SearchHits hits = response.getHits();
+        SearchHit[] hitsHits = hits.getHits();
+        for (SearchHit hitsHit : hitsHits) {
+            System.out.println(hitsHit);
+        }
+    }
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br></div></div></div></section> <footer class="page-edit"><!----> <div class="last-updated"><span class="prefix">Last Updated: </span> <span class="time">2023/3/21 16:59:10</span></div></footer> <div class="page-nav"><p class="inner"><span class="prev"><a href="/blog/docs/es/ElasticSearchStudy03.html" class="prev">
+            文档的操作
+          </a></span> <!----></p></div> <div class="comments-wrapper"><!----></div> <ul class="side-bar sub-sidebar-wrapper" style="width:12rem;" data-v-70334359><li class="level-2" data-v-70334359><a href="/blog/docs/es/ElasticSearchStudy04.html#找文档" class="sidebar-link reco-side-找文档" data-v-70334359>找文档</a></li><li class="level-2" data-v-70334359><a href="/blog/docs/es/ElasticSearchStudy04.html#找对象" class="sidebar-link reco-side-找对象" data-v-70334359>找对象</a></li><li class="level-2" data-v-70334359><a href="/blog/docs/es/ElasticSearchStudy04.html#搭建项目" class="sidebar-link reco-side-搭建项目" data-v-70334359>搭建项目</a></li><li class="level-3" data-v-70334359><a href="/blog/docs/es/ElasticSearchStudy04.html#pom" class="sidebar-link reco-side-pom" data-v-70334359>pom</a></li><li class="level-3" data-v-70334359><a href="/blog/docs/es/ElasticSearchStudy04.html#自定义es-版本依赖-与本地版本保持一直" class="sidebar-link reco-side-自定义es-版本依赖-与本地版本保持一直" data-v-70334359>自定义es 版本依赖，与本地版本保持一直</a></li><li class="level-3" data-v-70334359><a href="/blog/docs/es/ElasticSearchStudy04.html#" class="sidebar-link reco-side-" data-v-70334359></a></li><li class="level-3" data-v-70334359><a href="/blog/docs/es/ElasticSearchStudy04.html#自动配置" class="sidebar-link reco-side-自动配置" data-v-70334359>自动配置</a></li><li class="level-3" data-v-70334359><a href="/blog/docs/es/ElasticSearchStudy04.html#application-yml" class="sidebar-link reco-side-application-yml" data-v-70334359>application.yml</a></li><li class="level-2" data-v-70334359><a href="/blog/docs/es/ElasticSearchStudy04.html#索引-api-操作" class="sidebar-link reco-side-索引-api-操作" data-v-70334359>索引 API 操作</a></li><li class="level-3" data-v-70334359><a href="/blog/docs/es/ElasticSearchStudy04.html#创建索引" class="sidebar-link reco-side-创建索引" data-v-70334359>创建索引</a></li><li class="level-3" data-v-70334359><a href="/blog/docs/es/ElasticSearchStudy04.html#判断索引是否存在" class="sidebar-link reco-side-判断索引是否存在" data-v-70334359>判断索引是否存在</a></li><li class="level-3" data-v-70334359><a href="/blog/docs/es/ElasticSearchStudy04.html#删除索引" class="sidebar-link reco-side-删除索引" data-v-70334359>删除索引</a></li><li class="level-2" data-v-70334359><a href="/blog/docs/es/ElasticSearchStudy04.html#文档-api-操作" class="sidebar-link reco-side-文档-api-操作" data-v-70334359>文档 API 操作</a></li><li class="level-3" data-v-70334359><a href="/blog/docs/es/ElasticSearchStudy04.html#创建文档" class="sidebar-link reco-side-创建文档" data-v-70334359>创建文档</a></li><li class="level-3" data-v-70334359><a href="/blog/docs/es/ElasticSearchStudy04.html#判断文档是否存在" class="sidebar-link reco-side-判断文档是否存在" data-v-70334359>判断文档是否存在</a></li><li class="level-3" data-v-70334359><a href="/blog/docs/es/ElasticSearchStudy04.html#查询文档内容" class="sidebar-link reco-side-查询文档内容" data-v-70334359>查询文档内容</a></li><li class="level-3" data-v-70334359><a href="/blog/docs/es/ElasticSearchStudy04.html#更新文档" class="sidebar-link reco-side-更新文档" data-v-70334359>更新文档</a></li><li class="level-3" data-v-70334359><a href="/blog/docs/es/ElasticSearchStudy04.html#删除文档" class="sidebar-link reco-side-删除文档" data-v-70334359>删除文档</a></li><li class="level-3" data-v-70334359><a href="/blog/docs/es/ElasticSearchStudy04.html#批量操作文档内容" class="sidebar-link reco-side-批量操作文档内容" data-v-70334359>批量操作文档内容</a></li><li class="level-3" data-v-70334359><a href="/blog/docs/es/ElasticSearchStudy04.html#查询文档" class="sidebar-link reco-side-查询文档" data-v-70334359>查询文档</a></li></ul></main> <!----></div></div></div></div><div class="global-ui"><div class="back-to-ceiling" style="right:1rem;bottom:6rem;width:2.5rem;height:2.5rem;border-radius:.25rem;line-height:2.5rem;display:none;" data-v-c6073ba8 data-v-c6073ba8><svg t="1574745035067" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="5404" class="icon" data-v-c6073ba8><path d="M526.60727968 10.90185116a27.675 27.675 0 0 0-29.21455937 0c-131.36607665 82.28402758-218.69155461 228.01873535-218.69155402 394.07834331a462.20625001 462.20625001 0 0 0 5.36959153 69.94390903c1.00431239 6.55289093-0.34802892 13.13561351-3.76865779 18.80351572-32.63518765 54.11355614-51.75690182 118.55860487-51.7569018 187.94566865a371.06718723 371.06718723 0 0 0 11.50484808 91.98906777c6.53300375 25.50556257 41.68394495 28.14064038 52.69160883 4.22606766 17.37162448-37.73630017 42.14135425-72.50938081 72.80769204-103.21549295 2.18761121 3.04276886 4.15646224 6.24463696 6.40373557 9.22774369a1871.4375 1871.4375 0 0 0 140.04691725 5.34970492 1866.36093723 1866.36093723 0 0 0 140.04691723-5.34970492c2.24727335-2.98310674 4.21612437-6.18497483 6.3937923-9.2178004 30.66633723 30.70611158 55.4360664 65.4791928 72.80769147 103.21549355 11.00766384 23.91457269 46.15860503 21.27949489 52.69160879-4.22606768a371.15156223 371.15156223 0 0 0 11.514792-91.99901164c0-69.36717486-19.13165746-133.82216804-51.75690182-187.92578088-3.42062944-5.66790279-4.76302748-12.26056868-3.76865837-18.80351632a462.20625001 462.20625001 0 0 0 5.36959269-69.943909c-0.00994388-166.08943902-87.32547796-311.81420293-218.6915546-394.09823051zM605.93803103 357.87693858a93.93749974 93.93749974 0 1 1-187.89594924 6.1e-7 93.93749974 93.93749974 0 0 1 187.89594924-6.1e-7z" p-id="5405" data-v-c6073ba8></path><path d="M429.50777625 765.63860547C429.50777625 803.39355007 466.44236686 1000.39046097 512.00932183 1000.39046097c45.56695499 0 82.4922232-197.00623328 82.5015456-234.7518555 0-37.75494459-36.9345906-68.35043303-82.4922232-68.34111062-45.57627738-0.00932239-82.52019037 30.59548842-82.51086798 68.34111062z" p-id="5406" data-v-c6073ba8></path></svg></div><div class="Sakura" data-v-017cf06a><canvas id="canvas_sakura" style="z-index:2;" data-v-017cf06a></canvas></div><canvas id="vuepress-canvas-ribbon"></canvas><div class="RibbonAnimation"></div><div id="goTop" class="hide-cat" data-v-bf92849a></div><div></div><canvas id="vuepress-canvas-ribbon"></canvas></div></div>
+    <script src="/blog/assets/js/app.90949fa6.js" defer></script><script src="/blog/assets/js/6.046367ea.js" defer></script><script src="/blog/assets/js/1.cdc513ed.js" defer></script><script src="/blog/assets/js/8.77a36604.js" defer></script>
+  </body>
+</html>
