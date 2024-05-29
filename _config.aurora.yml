@@ -9,15 +9,15 @@
 #！ @docs https://aurora.tridiamond.tech/guide/configuration.html
 #! ---------------------------------------------------------------
 site:
-  subtitle: Aurora's Blog
-  author: Aurora
-  nick: Auroral UI
-  description:
+  subtitle: Wangruiyu's Blog
+  author: Wry
+  nick: 7D
+  description: 一位正在重塑知识的技术人 <br />
   link: '/'
-  language: en
+  language: zh-CN
   multi_language: true
   logo:
-  avatar:
+  avatar: https://avatars.githubusercontent.com/u/44721378?v=4
   beian:
     number: ''
     link: ''
@@ -26,7 +26,7 @@ site:
     link: ''
   # Start date of the blog YYY-MM-DD
   # 博客开始运行日期
-  started_date:
+  started_date: 2020-01-01
   # Path unique identifier (文章 URL 唯一标识)
   # uid: use unique ID
   # slug: use generated slug base on title
@@ -38,31 +38,50 @@ site:
 #！ @docs https://aurora.tridiamond.tech/guide/authors.html
 #! ---------------------------------------------------------------
 authors:
-##! example
-# TriDiamond:
-#   name: TriDiamond
-#   avatar: https://up.enterdesk.com/edpic_source/44/ff/3d/44ff3d6bd2819d524facfcc33205d4cd.jpg
-#   link: https://github.com/TriDiamond
-#   description: 'Think like an artist, code like an artisan.'
-#   socials:
-#     github: https://tridiamond.tech
+#! example
+ TriDiamond:
+   name: TriDiamond
+   avatar: https://up.enterdesk.com/edpic_source/44/ff/3d/44ff3d6bd2819d524facfcc33205d4cd.jpg
+   link: https://github.com/TriDiamond
+   description: 'Think like an artist, code like an artisan.'
+   socials:
+     github: https://tridiamond.tech
 
 #! ---------------------------------------------------------------
 #! Menu Configs
 #！ @docs https://aurora.tridiamond.tech/guide/menu.html
 #! ---------------------------------------------------------------
 menu:
-  About: true
-  Tags: true
-  Archives: true
-  Friends: false
+  About:
+    i18n:
+      en: 'About'
+      zh-CN: '关于'
+  Tags:
+    i18n:
+      en: 'My Tags'
+      zh-CN: '我的标签'
+  Archives:
+    i18n:
+      en: 'Archives'
+      zh-CN: '归档'
+  Links:
+    i18n:
+      en: 'Links'
+      zh-CN: '友情链接'
+  # 自定义菜单
+  message-board:
+    name: 'MessageBoard'
+    i18n:
+      zh-CN: '留言板'
+      en: 'Message Board'
+    path: '/page/message-board'
 
 #! ---------------------------------------------------------------
 #! Theme Config
 #! @docs https://aurora.tridiamond.tech/guide/theme.html
 #! ---------------------------------------------------------------
 theme:
-  dark_mode: true
+  dark_mode: 'auto'
   profile_shape: diamond # support `circle`, `diamond`, `rounded`
   feature: true
   gradient:
@@ -75,6 +94,7 @@ theme:
 #! @docs https://aurora.tridiamond.tech/guide/social.html
 #! ---------------------------------------------------------------
 socials:
+  github: 'https://github.com/BadKid90s'
   customs:
   ##! Example:
   ##! --- Using SVG
@@ -110,7 +130,7 @@ site_meta:
 
 # For local development only!
 gitalk:
-  enable: true
+  enable: false
   autoExpand: true
   clientID: ''
   clientSecret: ''
@@ -154,7 +174,7 @@ waline:
   enable: false
   recentComment: true
   reaction: false
-  login: 'disable'
+  login: 'enable'
   meta: ['nick', 'mail']
   requiredMeta: ['nick', 'mail']
   commentSorting: 'latest'
@@ -169,7 +189,7 @@ busuanzi:
   enable: false
 
 copy_protection:
-  enable: true
+  enable: false
   author:
     cn: 作者
     en: Author
