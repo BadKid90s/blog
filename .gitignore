@@ -1,3 +1,8 @@
-node_modules/
-yarn.error
-.idea
+# IDEA
+/.idea
+
+# NODE
+/public
+/node_modules
+/package-lock.json
+/yarn.lock
