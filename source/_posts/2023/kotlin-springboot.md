@@ -3,6 +3,8 @@ title: Kotlin整合SpringBoot后Jackson序列化问题
 date: 2023-06-05 10:00:00
 categories:
   - SpringBoot
+
+cover: /post/2023/kotlin-springboot/kotlin.png
 ---
 
 ## 问题

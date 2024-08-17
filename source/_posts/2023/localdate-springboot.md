@@ -3,6 +3,7 @@ title: SpringBoot接收前端Date类型参数转换LocalDate或LocalDateTime类�
 date: 2023-06-05 10:00:00
 categories:
   - SpringBoot
+cover: /post/2023/localdate-springboot/kotlin.jpg
 ---
 
 ## 问题
