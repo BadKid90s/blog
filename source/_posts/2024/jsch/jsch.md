@@ -7,7 +7,7 @@ tags:
 categories:
 - JAVA
 
-cover: /post/2024/jsch/jsch/ssh.webp
+cover: /post/2024/jsch/jsch/ssh.png
 ---
 
 ![img.png](img.png)
