@@ -5,11 +5,11 @@ tags:
 - Ceph
 categories:
 - 分布式存储
-cover: /images/ceph/ceph.png
+cover: /images/ceph/iscsi.jpg
 
 ---
 
-# Ceph Start ISCSI Deamon
+# Ceph Start ISCSI Daemon
 
 # 查文档
 

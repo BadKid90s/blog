@@ -5,7 +5,7 @@ tags:
   - Ceph
 categories:
   - 分布式存储
-cover: /images/ceph/ceph.png
+cover: /images/ceph/ceph.jpg
 ---
 
 # Ceph 存储引擎—OSD 类型

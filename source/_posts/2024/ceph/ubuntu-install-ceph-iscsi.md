@@ -5,7 +5,7 @@ tags:
 - Ceph
 categories:
 - 分布式存储
-cover: /images/ceph/ceph.png
+cover: /images/ceph/ceph2.png
 ---
 
 # Ubuntu 在线安装 Ceph-ISCSI服务
