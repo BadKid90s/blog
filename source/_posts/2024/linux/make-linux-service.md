@@ -6,7 +6,7 @@ tags:
 categories:
 - Linux
 
-cover: /post/2024/network/linux-setting-proxy/logo.jpg
+cover: /post/2024/linux/make-linux-service/logo.jpg
 ---
 
 
