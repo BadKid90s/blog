@@ -5,7 +5,7 @@ tags:
 - windows
 categories:
 - 网络
-cover: /post/2024/network/tap-windows/logo.jpg
+cover: /post/2024/network/tap-windows/logo.png
 
 ---
 
