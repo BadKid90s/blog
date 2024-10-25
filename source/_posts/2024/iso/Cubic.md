@@ -2,9 +2,9 @@
 title: Cubic（Custom Ubuntu ISO Creator）
 date: 2024-10-23 16:30:00
 tags:
-- ISO
+  - ISO
 categories:
-- Ubuntu
+  - Ubuntu
 cover: /post/2024/iso/Cubic/logo.png
 
 ---
@@ -75,7 +75,7 @@ sudo apt install --no-install-recommends cubic
 
 
 
-![image-20241023175532526](image-20241023175532526.png)
+![img](Home.png)
 
 ### 选择源镜像
 
@@ -85,11 +85,11 @@ sudo apt install --no-install-recommends cubic
 
 如果您选择更改某些值，则相关参数将在您键入时自动更新。的 Undo 和 Redo 按钮仅影响 Custom 部分中的字段。Refresh 按钮允许您将新 ISO 的版本更新到今天的日期，单击此按钮会将 Custom 字段中出现的所有旧版本替换为新版本。
 
-![img](Cubic Project Page.png)
+![img](CubicProjectPage.png)
 
 对于具有以前生成的 ISO 的现有项目，请单击 Test 按钮以测试以前生成的 ISO。QEMU † 模拟器将启动并引导至新的 ISO。如果以前没有为您的项目生成 ISO，或者您没有足够的内存来允许测试，则不会看到 Test （测试） 按钮。
 
-![img](Cubic Project Page Existing Project.png)
+![img](CubicProjectPageExistingProject.png)
 
 ### 解压源镜像
 
@@ -97,7 +97,7 @@ Cubic Extract 页面分析原始 ISO，复制用于引导 ISO 的重要文件，
 
 完成后，此页面将自动过渡到下一页。
 
-![img](Cubic Extract Page.png)
+![img](CubicExtractPage.png)
 
 ### 进入chroot
 
@@ -105,7 +105,7 @@ Cubic Extract 页面分析原始 ISO，复制用于引导 ISO 的重要文件，
 
 Cubic Terminal Page 是一个虚拟环境，您可以在其中自定义 Linux 文件系统。您将需要使用命令行，但由于您以 root 用户身份登录，因此在键入命令时不需要使用`sudo`。
 
-![img](Cubic Terminal Page.png)
+![img](CubicTerminalPage.png)
 
 > 请注意，此虚拟环境中没有活动服务，就像在实际运行的操作系统中一样。这是因为 Cubic 中的终端不是一个“正在运行的”操作系统。它只是一个安全、隔离的文件系统，您对其具有 root 访问权限，以便编辑、添加或删除文件。因此`systemd`等服务无法在 Cubic 的虚拟环境中运行。
 
@@ -138,7 +138,7 @@ nano /etc/apt/sources.list
 
 要退出 nano，请键入 +，系统将提示您保存文件。键入以保存文件，然后按 接受默认文件名。否则，键入以取消保存文件。
 
-![img](Cubic Terminal Page Nano.png)
+![img](CubicTerminalPageNano.png)
 
 您可以通过将文件或目录拖动到终端窗口、使用标题栏中的复制按钮或使用右键单击上下文菜单，将文件或目录复制到*当前目录中*。尽管 Cubic 目前不支持通过网络复制文件，但您可以在终端环境中使用 `scp,rcp` 命令来复制网络文件。
 
@@ -160,7 +160,7 @@ Cubic Prepare 页面会自动分析您的自定义项，并为自定义流程的
 - 为最小安装††创建程序包清单
 - 保存程序包清单
 
-![img](Cubic Prepare Page.png)
+![img](CubicPreparePage.png)
 
 完成后，此页面将自动过渡到下一页。
 
@@ -180,31 +180,31 @@ Cubic 选项页面包含三个选项卡：
 
 无论您在此页面上选择哪个内核来引导 Live ISO，您的自定义 Linux 系统都将使用您在[虚拟环境中](https://github.com/PJ-Singh-001/wiki/Terminal-Page)安装并配置为默认内核的内核。（默认内核通常是您安装的最后一个内核）。
 
-![img](Cubic Options Page Kernel Tab.png)
+![img](CubicOptionsPageKernelTab.png)
 
 #### 预置
 
 Preseed 允许您创建、编辑或删除 Preseed 文件。使用扩展名创建的文件将自动分配可执行权限。
 
-![img](Cubic Options Page Preseed Tab.png)
+![img](CubicOptionsPagePreseedTab.png)
 
 #### 引导
 
 Boot 允许您更新在引导自定义的 Live ISO 时使用的引导参数。这些文件会自动更新以反映正确的内核文件（vmlinuz 和 initrd）。使用扩展名创建的文件将自动分配可执行权限。
 
-![img](Cubic Options Page Boot Tab 2.png)
+![img](CubicOptionsPageBootTab2.png)
 
 ### 压缩算法选择
 
 Cubic Compression Page 允许您选择用于压缩自定义 Linux 文件系统的算法。对于大多数用户来说，继续使用默认算法 gzip 是可以的。
 
-![img](Cubic Compression Page.png)
+![img](CubicCompressionPage.png)
 
 ### 生成ISO镜像
 
 在 Cubic 生成页面上，Cubic 会自动将您的自定义打包到新的磁盘映像中。将显示每个步骤的进度和结果。请注意，“压缩自定义的 Linux 文件系统”步骤可能需要很长时间，具体取决于所选的压缩算法和您的系统硬件。（在此步骤中，您可能需要打开系统监视器以跟踪 CPU 利用率）。
 
-![img](Cubic Generate Page.png)
+![img](CubicGeneratePage.png)
 
 您可以随时单击 Back 按钮中断此过程，以便更新之前的选择或导航到虚拟环境并进行您可能忽略的其他更改或自定义。
 
@@ -218,7 +218,7 @@ Cubic Compression Page 允许您选择用于压缩自定义 Linux 文件系统�
 
 在 Cubic Finish 页面上，将显示有关自定义磁盘映像的信息。
 
-![img](Cubic Finish Page.png)
+![img](CubicFinishPage.png)
 
 单击 Test 按钮以测试生成的 ISO。QEMU † 模拟器将启动并引导至新的 ISO。如果您没有足够的内存来允许测试，则不会看到 Test （测试） 按钮。
 
