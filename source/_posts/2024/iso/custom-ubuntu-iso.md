@@ -5,7 +5,7 @@ tags:
   - ISO
 categories:
   - Ubuntu
-cover: /post/2024/iso/ubuntu/logo.png
+cover: /post/2024/iso/ubuntu/ubuntu.png
 
 ---
 
