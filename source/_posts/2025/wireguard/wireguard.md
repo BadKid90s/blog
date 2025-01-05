@@ -5,7 +5,7 @@ tags:
 - wireguard
 categories:
 - VPN
-cover: /post/2025/logo.png
+cover: /post/2025/wireguard/wireguard/logo.png
 
 ---
 
