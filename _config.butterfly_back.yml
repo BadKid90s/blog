@@ -9,8 +9,7 @@ nav:
 
 # Menu 目錄
 menu:
-# 搜索: /search  || fas fa-search
- 首页: /  || fas fa-home
+ 首页: /
  时间轴: /archives/ || fas fa-archive
  目录||fas fa-list:
    标签: /tags/ || fas fa-tag
@@ -31,10 +30,9 @@ code_word_wrap: false
 # Social Settings (社交圖標設置)
 # formal:
 #   icon: link || the description || color
-social:
- fab fa-github: https://github.com/BadKid90s || Github
- fas fa-envelope: mailto:wry10150@163.com || Email
- fa-brands fa-weixin: /image/index/wechat.png || WeChat
+#social:
+# fab fa-github: https://github.com/BadKid90s || Github || '#24292e'
+# fas fa-envelope: mailto:xxxxxx@gmail.com || Email || '#4a7dbe'
 
 # Image (圖片設置)
 # --------------------------------------
@@ -55,8 +53,6 @@ index_img: /images/index/index.jpg
 
 # If the banner of page not setting, it will show the top_img
 default_top_img: /images/index/index.jpg
-
-footer_img: true
 
 # The banner image of archive page
 archive_img:
@@ -152,7 +148,7 @@ toc:
   page: true
   number: true
   expand: false
-  style_simple: true # for post
+  style_simple: false # for post
   scroll_percent: true
 
 post_copyright:
@@ -233,10 +229,10 @@ aside:
       enable: true
       icon: fab fa-github
       text: Follow Me
-      link: https://github.com/BadKid90s
+      link: https://github.com/xxxxxx
   card_announcement:
     enable: true
-    content: 欢迎来到我的博客! <br>即便现实远不如梦想美好，我亦心生向往，静静追逐。
+    content: This is my Blog
   card_recent_post:
     enable: true
     limit: 5 # if set 0 will show all
@@ -359,11 +355,6 @@ katex:
 # search (搜索)
 # see https://butterfly.js.org/posts/ceeb73f/#搜索系統
 # --------------------------------------
-search:
- # Choose: algolia_search / local_search / docsearch
- # leave it empty if you don't need search
- use: local_search
- placeholder: 搜索
 
 # Algolia search
 algolia_search:
@@ -770,7 +761,7 @@ subtitle:
  # source: 2  调用一句网（简体） http://yijuzhan.com/
  # source: 3  调用今日诗词（简体） https://www.jinrishici.com/
  # subtitle 会先显示 source , 再显示 sub 的内容
- source: 3
+ source: http://yijuzhan.com/
  # 如果关闭打字效果，subtitle 只会显示 sub 的第一行文字
  sub:
   - 今日事&#44;今日毕
