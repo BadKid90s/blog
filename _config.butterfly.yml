@@ -34,7 +34,7 @@ code_word_wrap: false
 social:
  fab fa-github: https://github.com/BadKid90s || Github
  fas fa-envelope: mailto:wry10150@163.com || Email
- fa-brands fa-weixin: /image/index/wechat.png || WeChat
+# fa-brands fa-weixin: /image/index/wechat.png || WeChat
 
 # Image (圖片設置)
 # --------------------------------------
@@ -601,10 +601,10 @@ google_adsense:
 # --------------------------------------
 
 site_verification:
-# - name: google-site-verification
-#   content: xxxxxx
-# - name: baidu-site-verification
-#   content: xxxxxxx
+ - name: google-site-verification
+   content: Fm3msNxpTwRoLNnFcHsIKJJyQcm31B_iFiwOLg1JIPw
+ - name: baidu-site-verification
+   content: codeva-3vm7toMRs9
 
 # Beautify/Effect (美化/效果)
 # --------------------------------------
