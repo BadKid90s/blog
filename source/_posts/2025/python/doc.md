@@ -1,3 +1,14 @@
+---
+title: 使用python-docx-template渲染word文档
+date: 2025-02-11 12:30:00
+tags:
+- Python
+categories:
+- Python
+cover: /post/2025/python/doc/logo.png
+
+---
+
 # 使用python-docx-template渲染word文档
 
 ## 快速开始
