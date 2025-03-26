@@ -3,22 +3,22 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: Small Chilli
+title: chilix
 subtitle: '小辣椒'
 description: ''
 keywords: ' '
-author: small-chilli
+author: chilix
 language: zh
 timezone: 'Asia/Shanghai'
 
 # URL
 ## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'
-url: https://blog.small-chilli.top
+url: https://blog.chilix.cn
 sitemap:
-  url: https://blog.small-chilli.top  # 自己的域名
+  url: https://blog.chilix.cn  # 自己的域名
   path: sitemap.xml  #站点地图文件名称
 baidusitemap:
-  url: https://blog.small-chilli.top  # 自己的域名
+  url: https://blog.chilix.cn  # 自己的域名
   path: baidusitemap.xml #站点地图文件名称
 
 

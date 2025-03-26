@@ -21,7 +21,7 @@
 - **邮箱**：[wry10150@163.com](mailto:wry10150@163.com)
 - **社交媒体**：
   - [GitHub](https://github.com/BadKid90s/)
-  - [Blog](https://blog.small-chilli.top/)
+  - [Blog](https://blog.chilix.cn/)
 ## 版权声明
 
 本博客所有内容均为原创，未经允许，禁止转载。如需引用，请注明出处。
