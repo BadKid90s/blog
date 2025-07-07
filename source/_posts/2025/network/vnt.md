@@ -266,15 +266,19 @@ Wants = network.target
 
 [Service]
 Type = simple
+User=root
 ExecStart = /opt/vnt/vnt-cli -f /opt/vnt/config.yaml
+
 ExecStartPost = /sbin/iptables -I INPUT -i vnt-tun -j ACCEPT
 ExecStartPost = /sbin/iptables -I FORWARD -i vnt-tun -o vnt-tun -j ACCEPT
 ExecStartPost = /sbin/iptables -I FORWARD -i vnt-tun -j ACCEPT
 ExecStartPost = /sbin/iptables -t nat -I POSTROUTING -j MASQUERADE
+
 ExecStopPost = /sbin/iptables -D INPUT -i vnt-tun -j ACCEPT
 ExecStopPost = /sbin/iptables -D FORWARD -i vnt-tun -o vnt-tun -j ACCEPT
 ExecStopPost = /sbin/iptables -D FORWARD -i vnt-tun -j ACCEPT
 ExecStopPost = /sbin/iptables -t nat -D POSTROUTING -j MASQUERADE
+
 Restart = on-failure
 RestartSec = 5s
 
