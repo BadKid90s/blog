@@ -2,11 +2,10 @@
 title: 完全免费的P2P异地组网工具
 date: 2025-07-07 17:30:00
 tags:
-- network
+  - network
 categories:
-- VPN
+  - VPN
 cover: /post/2025/network/vnt/logo.png
-
 ---
 
 # [VNT介绍](https://rustvnt.com/guide/introduction.html#介绍)
@@ -236,7 +235,7 @@ allow_wire_guard: false # 为true则表示允许接入wg
 >
 >[可使用社区服务器](https://rustvnt.com/guide/server.html#可使用社区服务器)
 
-**开启IP转发** 
+**开启IP转发**
 
 ```
  sudo nano /etc/sysctl.conf
@@ -248,7 +247,29 @@ allow_wire_guard: false # 为true则表示允许接入wg
 net.ipv4.ip_forward=1
 ```
 
+配置环境变量
 
+```
+# 隧道接口名称
+TUN_IF=vnt-tun
+
+# 局域网接口（客户端要访问的目标内网）
+LAN_IF=ens192
+
+# 用于 NAT 的接口（通常是能访问公网的网卡）
+NAT_IF=ens160
+
+# 隧道分配的子网
+TUN_SUBNET=10.26.0.0/24
+```
+
+> 由于我的局域网B是包含2个网段的。
+>
+> ens192网卡是10.20.40.0/23，无法访问外网。
+>
+> ens160网卡是192.168.0.0/32，具有范围外网的权限。
+>
+> 所以在配置iptables时要进行区分，否则可能导致无法实现点对网的代理模式。
 
 ### 4.创建服务文件
 
@@ -267,17 +288,28 @@ Wants = network.target
 [Service]
 Type = simple
 User=root
-ExecStart = /opt/vnt/vnt-cli -f /opt/vnt/config.yaml
 
-ExecStartPost = /sbin/iptables -I INPUT -i vnt-tun -j ACCEPT
-ExecStartPost = /sbin/iptables -I FORWARD -i vnt-tun -o vnt-tun -j ACCEPT
-ExecStartPost = /sbin/iptables -I FORWARD -i vnt-tun -j ACCEPT
-ExecStartPost = /sbin/iptables -t nat -I POSTROUTING -j MASQUERADE
+# 设置默认环境变量
+EnvironmentFile=/opt/vnt/vntserver
+# 启动命令
+ExecStart = /opt/vnt/vnt-cli -f /opt/vnt/vntc.yaml
+# 允许从隧道接口入站
+ExecStartPost = /sbin/iptables -I INPUT -i ${TUN_IF} -j ACCEPT
+# 允许客户端之间通信
+ExecStartPost = /sbin/iptables -I FORWARD -i ${TUN_IF} -o ${TUN_IF} -j ACCEPT
+# 允许从隧道接口转发到局域网接口
+ExecStartPost = /sbin/iptables -I FORWARD -i ${TUN_IF} -o ${LAN_IF} -j ACCEPT
+# 允许已建立连接的回程流量
+ExecStartPost = /sbin/iptables -I FORWARD -m conntrack --ctstate RELATED,ESTABLISHED -j ACCEPT
+# 启用 MASQUERADE/NAT（根据需要选择 LAN_IF 或 WAN_IF）
+ExecStartPost = /sbin/iptables -t nat -I POSTROUTING -o ${NAT_IF} -s ${TUN_SUBNET} -j MASQUERADE
 
-ExecStopPost = /sbin/iptables -D INPUT -i vnt-tun -j ACCEPT
-ExecStopPost = /sbin/iptables -D FORWARD -i vnt-tun -o vnt-tun -j ACCEPT
-ExecStopPost = /sbin/iptables -D FORWARD -i vnt-tun -j ACCEPT
-ExecStopPost = /sbin/iptables -t nat -D POSTROUTING -j MASQUERADE
+# 停止时删除规则
+ExecStopPost = /sbin/iptables -D INPUT -i ${TUN_IF} -j ACCEPT
+ExecStopPost = /sbin/iptables -D FORWARD -i ${TUN_IF} -o ${TUN_IF} -j ACCEPT
+ExecStopPost = /sbin/iptables -D FORWARD -i ${TUN_IF} -o ${LAN_IF} -j ACCEPT
+ExecStopPost = /sbin/iptables -D FORWARD -m conntrack --ctstate RELATED,ESTABLISHED -j ACCEPT
+ExecStopPost = /sbin/iptables -t nat -D POSTROUTING -o ${NAT_IF} -s ${TUN_SUBNET} -j MASQUERADE
 
 Restart = on-failure
 RestartSec = 5s
